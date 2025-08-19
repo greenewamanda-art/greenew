@@ -1,32 +1,24 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Header from "@/components/header"
 import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
 import AnimatedText from "@/components/animated-text"
+import TypewriterText from "@/components/typewriter-text"
 
 export default function HomePage() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0)
   const [videoModalOpen, setVideoModalOpen] = useState(false)
 
   const services = [
-    { text: "Digital & social", color: "#ff030c" },
-    { text: "Content & video", color: "#0a5f04" },
-    { text: "Events", color: "#f5ea8a" },
-    { text: "Branding", color: "#ff030c" },
-    { text: "Endomarketing", color: "#175f30" },
+    { text: "Digital & social", color: "#0169B8" },
+    { text: "Content & video", color: "#00A0E6" },
+    { text: "Events", color: "#FFA701" },
+    { text: "Branding", color: "#FF030C" },
+    { text: "Endomarketing", color: "#FF6EAA" },
   ]
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % services.length)
-    }, 2000)
-
-    return () => clearInterval(interval)
-  }, [services.length])
 
   return (
     <div className="min-h-screen">
@@ -122,12 +114,13 @@ export default function HomePage() {
               }}
               as="h1"
             />
-            <div className="text-xl sm:text-2xl lg:text-4xl font-bold transition-all duration-500 ease-in-out">
-              <AnimatedText
-                key={currentServiceIndex}
-                text={services[currentServiceIndex].text}
-                className="font-bold"
-                as="span"
+            <div className="text-xl sm:text-2xl lg:text-4xl font-bold">
+              <TypewriterText
+                texts={services.map((service) => service.text)}
+                colors={services.map((service) => service.color)}
+                className="font-bold text-white"
+                speed={120}
+                pauseDuration={1500}
               />
             </div>
           </div>
@@ -137,8 +130,8 @@ export default function HomePage() {
         <div className="w-full lg:w-1/2 bg-[#f5ea8a] relative overflow-hidden flex flex-col justify-center min-h-[300px] sm:min-h-[400px]">
           <div className="relative z-10 px-6 py-8 sm:py-0">
             <div className="max-w-md">
-              <div className="flex items-start gap-3 sm:gap-4 mb-6 sm:mb-8">
-                <span className="text-[#282828] text-xl sm:text-2xl font-bold mt-1">—</span>
+              <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+                <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
                 <AnimatedText
                   text="Soluções versáteis e eficazes para a real necessidade do cliente"
                   className="text-[#282828] text-xl sm:text-2xl lg:text-3xl font-bold leading-tight"
@@ -158,16 +151,16 @@ export default function HomePage() {
         {/* Left Side - About Us */}
         <div className="w-full lg:w-1/2 bg-[#f5ea8a] p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
           <div className="max-w-md">
-            <AnimatedText
-              text="QUEM SOMOS"
-              className="text-[#282828] text-2xl sm:text-3xl font-bold mb-6 sm:mb-8"
-              as="h2"
-            />
-            <AnimatedText
-              text="A Greenew é uma agência de propaganda 360° capaz de atender diversas demandas de marketing. Conta com equipe criativa, apaixonada e sobretudo focada em resolver com excelência as necessidades das empresas com que trabalhamos. Nossos profissionais realizam campanhas que concretizam o resultado desejado pelas empresas que solicitam nossos serviços."
-              className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8"
-              as="p"
-            />
+            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
+              <AnimatedText text="QUEM SOMOS" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" />
+            </div>
+            <p className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+              A Greenew é uma agência de propaganda 360° capaz de atender diversas demandas de marketing. Conta com
+              equipe criativa, apaixonada e sobretudo focada em resolver com excelência as necessidades das empresas com
+              que trabalhamos. Nossos profissionais realizam campanhas que concretizam o resultado desejado pelas
+              empresas que solicitam nossos serviços.
+            </p>
             <Button className="bg-[#0a5f04] hover:bg-[#175f30] text-white px-4 sm:px-6 py-2 rounded-sm text-sm sm:text-base">
               Saiba mais
             </Button>
@@ -219,19 +212,18 @@ export default function HomePage() {
         {/* Right Side - Text Content */}
         <div className="w-full lg:w-1/2 bg-[#f5ea8a] p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
           <div className="max-w-md">
-            <div className="flex items-start gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <span className="text-[#282828] text-xl sm:text-2xl font-bold mt-1">—</span>
+            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+              <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
               <AnimatedText
                 text="Responsabilidade Socioambiental"
                 className="text-[#282828] text-xl sm:text-2xl lg:text-3xl font-bold leading-tight"
                 as="h2"
               />
             </div>
-            <AnimatedText
-              text="Nosso compromisso em atender à crescente necessidade de revisar padrões vigentes para que o sucesso seja alcançado ponderando-se os impactos sociais e ambientais consequentes da atuação da empresa."
-              className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8"
-              as="p"
-            />
+            <p className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+              Nosso compromisso em atender à crescente necessidade de revisar padrões vigentes para que o sucesso seja
+              alcançado ponderando-se os impactos sociais e ambientais consequentes da atuação da empresa.
+            </p>
             <Button className="bg-[#0a5f04] hover:bg-[#175f30] text-white px-4 sm:px-6 py-2 rounded-sm text-sm sm:text-base">
               Saiba mais
             </Button>
@@ -264,7 +256,7 @@ export default function HomePage() {
             <div className="relative z-10 flex flex-col justify-center h-full min-h-[400px] sm:min-h-[600px]">
               <div className="max-w-md">
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <span className="text-white text-xl sm:text-2xl font-bold">—</span>
+                  <div className="w-16 sm:w-20 h-0.5 bg-white"></div>
                   <AnimatedText
                     text="Portfolio"
                     className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold"

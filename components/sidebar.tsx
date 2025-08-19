@@ -38,7 +38,12 @@ export default function Sidebar({ isOpen, onClose, currentPage = "" }: SidebarPr
               </a>
             </li>
             <li>
-              <a href="#" className="text-[#282828] text-xl font-bold hover:text-[#0a5f04] transition-colors">
+              <a
+                href="/quem-somos"
+                className={`text-xl font-bold transition-colors ${
+                  currentPage === "quem-somos" ? "text-[#0a5f04]" : "text-[#282828] hover:text-[#0a5f04]"
+                }`}
+              >
                 Quem somos
               </a>
             </li>
@@ -53,7 +58,12 @@ export default function Sidebar({ isOpen, onClose, currentPage = "" }: SidebarPr
               </a>
             </li>
             <li>
-              <a href="#" className="text-[#282828] text-xl font-bold hover:text-[#0a5f04] transition-colors">
+              <a
+                href="/contato"
+                className={`text-xl font-bold transition-colors ${
+                  currentPage === "contato" ? "text-[#0a5f04]" : "text-[#282828] hover:text-[#0a5f04]"
+                }`}
+              >
                 Fale Conosco
               </a>
             </li>
@@ -68,7 +78,12 @@ export default function Sidebar({ isOpen, onClose, currentPage = "" }: SidebarPr
               </a>
             </li>
             <li>
-              <a href="#" className="text-[#282828] text-xl font-bold hover:text-[#0a5f04] transition-colors">
+              <a
+                href="/clientes"
+                className={`text-xl font-bold transition-colors ${
+                  currentPage === "clientes" ? "text-[#0a5f04]" : "text-[#282828] hover:text-[#0a5f04]"
+                }`}
+              >
                 Clientes
               </a>
             </li>
