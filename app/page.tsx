@@ -7,6 +7,7 @@ import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
 import AnimatedText from "@/components/animated-text"
 import TypewriterText from "@/components/typewriter-text"
+import Link from "next/link"
 
 export default function HomePage() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -21,10 +22,10 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen sm:mt-[80px] mt-0">
       {videoModalOpen && (
         <div
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
+          className="fixed inset-0  bg-black/80 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
           onClick={() => setVideoModalOpen(false)}
         >
           <div
@@ -40,7 +41,7 @@ export default function HomePage() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/WMSO07BjGEY?autoplay=1"
+              src="https://www.youtube.com/embed/WMSO07BjGEY?autoplay=1&mute=1"
               title="Portfolio Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -57,8 +58,8 @@ export default function HomePage() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="home" />
 
       {/* YouTube Video */}
-      <section className="bg-[#282828] py-8 sm:py-12 pt-20">
-        <div className="w-full px-4 sm:px-6">
+      <section className="bg-[#282828] py-8 sm:py-20 pt-20 mt-[20px] sm:mt-0">
+        <div className="w-full  sm:px-0">
           <div className="relative aspect-video">
             <iframe
               width="100%"
@@ -71,19 +72,28 @@ export default function HomePage() {
               allowFullScreen
               className="w-full h-full rounded-lg"
             />
+
+            {/* <video
+              src="https://www.youtube.com/watch?v=WMSO07BjGEY"
+              autoPlay
+              muted
+              playsInline
+              loop
+              className="w-full h-full rounded-lg shadow-2xl"
+            ></video> */}
           </div>
         </div>
       </section>
 
       {/* Main Content Split */}
-      <section className="flex flex-col lg:flex-row min-h-[400px] sm:min-h-[600px]">
+      <section className="flex flex-col lg:flex-row min-h-[400px] sm:h-[900px] h-auto">
         {/* Left Side - New Design with Services Animation */}
         <div
-          className="w-full lg:w-1/2 relative overflow-hidden min-h-[400px] sm:min-h-[600px]"
+          className="w-full lg:w-1/2 relative overflow-hidden min-h-[600px] sm:min-h-[600px]"
           style={{
             backgroundColor: "#0A5F04",
             backgroundImage: "url(/tree-background.png)",
-            backgroundPosition: "center center",
+            backgroundPosition: "center top",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
@@ -96,29 +106,21 @@ export default function HomePage() {
             }}
           />
 
-          <div className="absolute bottom-8 sm:bottom-16 left-4 sm:left-8 z-10">
+          <div className="absolute bottom-40 sm:bottom-48 px-7 lg:px-[60px] z-10">
             <AnimatedText
               text="SOLUÇÕES"
               className="text-white text-xs sm:text-sm font-medium tracking-wider mb-2 sm:mb-4"
               as="p"
             />
-            <AnimatedText
-              text="New"
-              className="text-white font-nunito font-bold capitalize tracking-wide leading-tight text-4xl sm:text-6xl lg:text-7xl xl:text-8xl mb-2 sm:mb-4"
-              style={{
-                fontFamily: '"Nunito", Sans-serif',
-                fontWeight: 700,
-                textTransform: "capitalize",
-                lineHeight: "1.1em",
-                letterSpacing: "1.7px",
-              }}
-              as="h1"
-            />
+
+            <h2 className="text-white stroke font-nunito font-bold capitalize tracking-wide leading-tight text-[80px] sm:text-6xl lg:text-7xl xl:text-8xl mb-2 sm:mb-4">
+              <b>New</b>
+            </h2>
             <div className="text-xl sm:text-2xl lg:text-4xl font-bold">
               <TypewriterText
                 texts={services.map((service) => service.text)}
                 colors={services.map((service) => service.color)}
-                className="font-bold text-white"
+                className="font-bold text-white font-nunito"
                 speed={120}
                 pauseDuration={1500}
               />
@@ -127,19 +129,20 @@ export default function HomePage() {
         </div>
 
         {/* Right Side - Updated with black text and dash */}
-        <div className="w-full lg:w-1/2 bg-[#f5ea8a] relative overflow-hidden flex flex-col justify-center min-h-[300px] sm:min-h-[400px]">
-          <div className="relative z-10 px-6 py-8 sm:py-0">
-            <div className="max-w-md">
+        <div className="w-full lg:w-1/2 bg-[#f5ea8a] relative overflow-hidden flex flex-col justify-center min-h-[300px] lg:min-h-[400px]">
+          <div className="relative py-14 lg:py-0 z-10 -mt-0 lg:-mt-[171px] px-7 lg:px-[60px]">
+            <div className="max-w-md sm:max-w-4xl">
               <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
-                <AnimatedText
-                  text="Soluções versáteis e eficazes para a real necessidade do cliente"
-                  className="text-[#282828] text-xl sm:text-2xl lg:text-3xl font-bold leading-tight"
-                  as="h2"
-                />
+
+                <h2 className="text-[#282828] text-2xl sm:text-3xl lg:text-4xl font-bold animated-text">Soluções versáteis e eficazes<br className="hidden sm:block"></br> para a real necessidade<br className="hidden sm:block"></br> do cliente</h2>
+                {/* <AnimatedText text="Soluções versáteis e eficazes para a real necessidade do cliente" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" /> */}
               </div>
-              <Button className="bg-[#0a5f04] hover:bg-[#175f30] text-white px-4 sm:px-6 py-2 rounded-sm text-sm sm:text-base">
-                Ver mais
+
+              <Button variant='link' asChild>
+                <Link href='/oquefazemos' className="block font-poppins font-light">
+                  Ver mais
+                </Link>
               </Button>
             </div>
           </div>
@@ -147,13 +150,14 @@ export default function HomePage() {
       </section>
 
       {/* Bottom Section */}
-      <section className="flex flex-col lg:flex-row min-h-[400px] sm:min-h-[500px]">
+      <section className="flex flex-col lg:flex-row min-h-[400px] lg:h-[900px] h-auto">
         {/* Left Side - About Us */}
-        <div className="w-full lg:w-1/2 bg-[#f5ea8a] p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
-          <div className="max-w-md">
+        <div className="w-full lg:w-1/2 bg-[#f5ea8a] px-7 lg:px-[60px] flex flex-col justify-center order-2 lg:order-none">
+          <div className="max-w-md sm:max-w-4xl -mt-0 lg:-mt-[171px] py-14 lg:py-0">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
-              <AnimatedText text="QUEM SOMOS" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" />
+              <div className="w-16 lg:w-20 h-0.5 bg-[#282828]"></div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#282828] font-bold animated-text">QUEM SOMOS</h2>
+              {/* <AnimatedText text="QUEM SOMOS" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" /> */}
             </div>
             <p className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               A Greenew é uma agência de propaganda 360° capaz de atender diversas demandas de marketing. Conta com
@@ -161,15 +165,17 @@ export default function HomePage() {
               que trabalhamos. Nossos profissionais realizam campanhas que concretizam o resultado desejado pelas
               empresas que solicitam nossos serviços.
             </p>
-            <Button className="bg-[#0a5f04] hover:bg-[#175f30] text-white px-4 sm:px-6 py-2 rounded-sm text-sm sm:text-base">
-              Saiba mais
+            <Button variant='link' asChild>
+              <Link href='/quem-somos' className="block font-poppins font-light">
+                Ver mais
+              </Link>
             </Button>
           </div>
         </div>
 
         {/* Right Side - Green Texture */}
         <div
-          className="w-full lg:w-1/2 relative overflow-hidden min-h-[200px] sm:min-h-[300px]"
+          className="w-full lg:w-1/2 relative overflow-hidden min-h-[500px] lg:min-h-[300px]"
           style={{
             backgroundImage: "url(/digital-tree-blue.jpg)",
             backgroundPosition: "top right",
@@ -188,16 +194,16 @@ export default function HomePage() {
       </section>
 
       {/* New Parallax Section - Responsabilidade Socioambiental */}
-      <section className="flex flex-col lg:flex-row min-h-[400px] sm:min-h-[600px]">
+      <section className="flex flex-col lg:flex-row min-h-[400px] lg:h-[900px] h-auto">
         {/* Left Side - Parallax Image with Green Overlay */}
         <div
-          className="w-full lg:w-1/2 relative overflow-hidden min-h-[300px] sm:min-h-[400px]"
+          className="w-full lg:w-1/2 relative overflow-hidden min-h-[300px] lg:min-h-[400px]"
           style={{
-            backgroundImage: "url(/tree-background.png)",
+            backgroundImage: "url(/digital-circuit-tree.jpg)",
             backgroundPosition: "center left",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            backgroundAttachment: window.innerWidth > 1024 ? "fixed" : "scroll", // Remove parallax on mobile for better performance
+            backgroundAttachment: 'fixed' // window.innerWidth > 1024 ? "fixed" : "fixed"
           }}
         >
           <div
@@ -210,22 +216,27 @@ export default function HomePage() {
         </div>
 
         {/* Right Side - Text Content */}
-        <div className="w-full lg:w-1/2 bg-[#f5ea8a] p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
-          <div className="max-w-md">
+        <div className="w-full lg:w-1/2 bg-[#f5ea8a] flex flex-col justify-center lg:py-0 px-7 lg:px-[60px]">
+          <div className="max-w-md sm:max-w-4xl mt-0 lg:-mt-[171px]  py-14 lg:py-0">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
-              <AnimatedText
+              <div className="w-16 lg:w-20 h-0.5 bg-[#282828]"></div>
+
+              <h2 className="text-[#282828] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight animated-text">Responsabilidade Socioambiental</h2>
+
+              {/* <AnimatedText
                 text="Responsabilidade Socioambiental"
-                className="text-[#282828] text-xl sm:text-2xl lg:text-3xl font-bold leading-tight"
+               className="text-[#282828] text-xl sm:text-2xl lg:text-4xl font-bold leading-tight animated-text"
                 as="h2"
-              />
+              /> */}
             </div>
             <p className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
               Nosso compromisso em atender à crescente necessidade de revisar padrões vigentes para que o sucesso seja
               alcançado ponderando-se os impactos sociais e ambientais consequentes da atuação da empresa.
             </p>
-            <Button className="bg-[#0a5f04] hover:bg-[#175f30] text-white px-4 sm:px-6 py-2 rounded-sm text-sm sm:text-base">
-              Saiba mais
+            <Button variant='link' asChild>
+              <Link href='/responsabilidade-socioambiental' className="block font-poppins font-light">
+                Ver mais
+              </Link>
             </Button>
           </div>
         </div>
@@ -233,10 +244,10 @@ export default function HomePage() {
 
       {/* New Portfolio Section */}
       <section
-        className="relative min-h-[400px] sm:min-h-[600px] flex"
+        className="relative min-h-[400px] sm:min-h-[500px] flex"
         style={{
           backgroundImage: "url(/portfolio-background.jpg)",
-          backgroundPosition: "center center",
+          backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -253,18 +264,22 @@ export default function HomePage() {
         {/* Left side content */}
         <div className="w-full">
           <div className="max-w-[1140px] mx-auto px-6 h-full">
-            <div className="relative z-10 flex flex-col justify-center h-full min-h-[400px] sm:min-h-[600px]">
-              <div className="max-w-md">
+            <div className="relative z-10 flex flex-col justify-center h-full min-h-[400px] sm:min-h-[500px]">
+              <div className="max-w-md flex flex-col gap-14">
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="w-16 sm:w-20 h-0.5 bg-white"></div>
-                  <AnimatedText
+                  {/* <AnimatedText
                     text="Portfolio"
                     className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold"
                     as="h2"
-                  />
+                  /> */}
+                  <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold animated-text">Portfolio</h2>
+
                 </div>
-                <Button className="bg-[#0a5f04] hover:bg-[#175f30] text-white px-4 sm:px-6 py-2 rounded-sm text-sm sm:text-base">
-                  Saiba mais
+                <Button variant='link' className="w-fit" asChild>
+                  <Link href="#">
+                    Saiba mais
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -272,14 +287,21 @@ export default function HomePage() {
         </div>
 
         {/* Centered play button - positioned absolutely to center of entire section */}
-        <button
+        <div className="absolute top-1/2 w-24 h-24 border border-[#ffffff33] rounded-full flex items-center justify-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors shadow-lg z-20">
+          <button className="bg-white cursor-pointer w-20 h-20 rounded-full flex items-center justify-center" onClick={() => setVideoModalOpen(true)}>
+            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#000] ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+        </div>
+        {/* <button
           onClick={() => setVideoModalOpen(true)}
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg z-20"
+          className="cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg z-20"
         >
           <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#0a5f04] ml-1" fill="currentColor" viewBox="0 0 24 24">
             <path d="M8 5v14l11-7z" />
           </svg>
-        </button>
+        </button> */}
       </section>
 
       <Footer />

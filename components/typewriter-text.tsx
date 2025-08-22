@@ -64,10 +64,10 @@ export default function TypewriterText({
 
   return (
     <span className={className}>
-      <span style={{ color: currentColor }}>{currentText}</span>
+      <span className="text-5xl sm:text-[68px]" style={{ color: currentColor }}>{currentText}</span>
       <span
-        className={`inline-block w-0.5 h-[1em] bg-current ml-1 ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity duration-100`}
-        style={{ backgroundColor: currentColor }}
+        className={`inline-block w-0.5 h-[1.6em] bg-current ml-1  ${showCursor ? "opacity-100" : "opacity-0"} transition-opacity duration-100`}
+        style={{ backgroundColor: 'white' }}
       />
     </span>
   )

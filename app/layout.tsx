@@ -1,14 +1,21 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
 import { Nunito } from "next/font/google"
+import { Poppins } from "next/font/google"
 import "./globals.css"
+import Cursor from "@/components/cursor"
 
 const nunito = Nunito({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-nunito",
+})
+
+const poppins = Poppins({
+  weight: ['300', '500', '900'],
+  variable: "--font-poppins",
+  subsets: ['latin']
+
 })
 
 export const metadata: Metadata = {
@@ -23,18 +30,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={nunito.variable}>
+    <html lang="pt-BR" className={`${nunito.variable} ${poppins.variable}`}>
       <head>
         <style>{`
 html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
   --font-nunito: ${nunito.style.fontFamily};
+  --font-poppins: ${poppins.style.fontFamily};
 }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body>
+        <Cursor />
+        {children}
+      </body>
     </html>
   )
 }

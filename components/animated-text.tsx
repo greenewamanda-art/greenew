@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react"
 interface AnimatedTextProps {
   text: string
   className?: string
-  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div"
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div" | "b"
 }
 
 export default function AnimatedText({ text, className = "", as: Component = "span" }: AnimatedTextProps) {

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState, useEffect } from "react"
 
 export default function Footer() {
@@ -29,7 +30,7 @@ export default function Footer() {
       <div className="max-w-[1140px] mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between items-start mb-8 sm:mb-12 lg:mb-16">
           <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 lg:w-2/3 mb-8 lg:mb-0 w-full">
-            <p className="text-[#282828] text-base sm:text-lg leading-relaxed flex-1">
+            <p className="text-[#282828] text-base leading-relaxed flex-1">
               A Greenew é uma agência full-service que trabalha de maneira 360°. Somos capazes de atender diversas
               demandas de marketing e dessa forma desenvolvemos campanhas integradas.
             </p>
@@ -46,7 +47,8 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row lg:flex-row justify-between items-center gap-4 sm:gap-6">
           <div className="flex items-center">
-            <img src="/dpo-logo.png" alt="DPO Oficial" className="w-16 h-16 sm:w-20 sm:h-20 rounded-full" />
+            <Image width={180} height={180} src="/dpo-logo.png" alt="DPO Oficial" className="w-[180px] rounded-full"/>
+           
           </div>
 
           <div className="text-[#282828] text-xs sm:text-sm font-medium text-center">

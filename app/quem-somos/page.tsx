@@ -6,6 +6,7 @@ import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
 import ParticleBackground from "@/components/particle-background"
 import AnimatedText from "@/components/animated-text"
+import Image from "next/image"
 
 export default function QuemSomos() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -16,17 +17,19 @@ export default function QuemSomos() {
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="quem-somos" />
 
       {/* Hero Section */}
-      <section className="bg-[#0a5f04] pt-20">
-        <div className="max-w-[1140px] mx-auto px-6 py-12 sm:py-16">
-          <AnimatedText
-            text="A Greenew é uma agência de propaganda 360°"
-            className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight"
-          />
+
+      <section className="bg-[#0a5f04] pt-[120px] pb-[40px] relative mt-[80px]">
+        <div className="max-w-[1140px] mx-auto px-6 relative z-10">
+          <h1 className="text-white text-lg lg:text-3xl font-poppins font-medium text-left">
+            A Greenew é uma agência de<br className="hidden sm:block"></br> propaganda 360
+          </h1>
+          <h2 className="text-right text-[40px] sm:text-[70px] lg:text-[100px] stroke font-poppins absolute right-2 -bottom-[60px] sm:right-[30px] sm:-bottom-[90px]">Quem somos
+          </h2>
         </div>
       </section>
 
       {/* Tree Section */}
-      <section className="bg-[#0a5f04] py-8 sm:py-12">
+      <section className="bg-[#0a5f04]">
         <div
           className="w-full h-64 sm:h-80 lg:h-96 relative"
           style={{
@@ -46,8 +49,38 @@ export default function QuemSomos() {
         </div>
       </section>
 
+      <section className="relative bg-[#402315] pb-52 sm:pb-20">
+        <ParticleBackground />
+        <div className="px-6 py-12 lg:py-16 relative z-20 text-white flex">
+          <div className="w-full sm:w-1/2">
+            <p className="text-[14px] leading-relaxed font-poppins">
+              A Greenew é uma agência full-service que trabalha de maneira 360°. Somos capazes de atender diversas demandas de marketing e dessa forma desenvolvemos campanhas integradas. Desde 2011, atendemos empresas da indústria farmacêutica criando campanhas inovadoras. Eventos online e offline utilizando alta tecnologia, branding, digital, vídeos, endomarketing e outros. Contamos com uma equipe experiente, criativa e apaixonada. Sobretudo focada em resolver com excelência as necessidades dos nossos clientes. A Greenew é uma empresa de diversidade que pensa no futuro. Por isso, adotamos e buscamos trazer para nossos clientes soluções sustentáveis, que respeitem as questões socioambientais e as pessoas. Porque elas são a força e a vitalidade de qualquer empresa.
+            </p>
+          </div>
+          <div className="hidden sm:block sm:w-1/2 sm:px-4">
+            <Image
+              width={545}
+              height={545}
+              alt=""
+              src="digital-circuit-tree.jpg"
+              className="w-full"
+            />
+          </div>
+        </div>
+
+        <div className="absolute bottom-0 right-2">
+          <Image
+            width={100}
+            height={100}
+            alt=""
+            src='/folha3.png'
+            className="w-[250px]"
+          />
+        </div>
+      </section>
+
       {/* Main Content Section */}
-      <section className="relative" style={{ minHeight: "800px" }}>
+      <section className="relative hidden" style={{ minHeight: "800px" }}>
         {/* Full-screen particles background */}
         <div className="fixed inset-0 z-0">
           <ParticleBackground />
