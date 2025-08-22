@@ -135,7 +135,7 @@ export default function HomePage() {
               <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
 
-                <h2 className="text-[#282828] text-2xl sm:text-3xl lg:text-4xl font-bold animated-text">Soluções versáteis e eficazes<br className="hidden sm:block"></br> para a real necessidade<br className="hidden sm:block"></br> do cliente</h2>
+                <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl font-medium animated-text">Soluções versáteis e eficazes<br className="hidden sm:block"></br> para a real necessidade<br className="hidden sm:block"></br> do cliente</h2>
                 {/* <AnimatedText text="Soluções versáteis e eficazes para a real necessidade do cliente" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" /> */}
               </div>
 
@@ -156,7 +156,7 @@ export default function HomePage() {
           <div className="max-w-md sm:max-w-4xl -mt-0 lg:-mt-[171px] py-14 lg:py-0">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div className="w-16 lg:w-20 h-0.5 bg-[#282828]"></div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-[#282828] font-bold animated-text">QUEM SOMOS</h2>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium animated-text">QUEM SOMOS</h2>
               {/* <AnimatedText text="QUEM SOMOS" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" /> */}
             </div>
             <p className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
@@ -221,7 +221,7 @@ export default function HomePage() {
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div className="w-16 lg:w-20 h-0.5 bg-[#282828]"></div>
 
-              <h2 className="text-[#282828] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight animated-text">Responsabilidade Socioambiental</h2>
+              <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight animated-text">Responsabilidade Socioambiental</h2>
 
               {/* <AnimatedText
                 text="Responsabilidade Socioambiental"
@@ -273,7 +273,7 @@ export default function HomePage() {
                     className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold"
                     as="h2"
                   /> */}
-                  <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold animated-text">Portfolio</h2>
+                  <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-medium animated-text">Portfolio</h2>
 
                 </div>
                 <Button variant='link' className="w-fit" asChild>
