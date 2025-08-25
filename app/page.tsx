@@ -8,9 +8,11 @@ import Footer from "@/components/footer"
 import AnimatedText from "@/components/animated-text"
 import TypewriterText from "@/components/typewriter-text"
 import Link from "next/link"
+import { TextAnimate } from "@/components/magicui/text-animate";
+
+
 
 export default function HomePage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
   const [videoModalOpen, setVideoModalOpen] = useState(false)
 
   const services = [
@@ -53,12 +55,8 @@ export default function HomePage() {
         </div>
       )}
 
-      {/* Header moved before video section */}
-      <Header onMenuClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="home" />
-
       {/* YouTube Video */}
-      <section className="bg-[#282828] py-8 sm:py-20 pt-20 mt-[20px] sm:mt-0">
+      <section className="bg-[#282828] py-8 sm:py-20 pt-20 mt-[100px] sm:mt-0">
         <div className="w-full  sm:px-0">
           <div className="relative aspect-video">
             <iframe
@@ -134,9 +132,9 @@ export default function HomePage() {
             <div className="max-w-md sm:max-w-4xl">
               <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <div className="w-16 sm:w-20 h-0.5 bg-[#282828]"></div>
-
-                <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl font-medium animated-text">Soluções versáteis e eficazes<br className="hidden sm:block"></br> para a real necessidade<br className="hidden sm:block"></br> do cliente</h2>
-                {/* <AnimatedText text="Soluções versáteis e eficazes para a real necessidade do cliente" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" /> */}
+                <TextAnimate className="max-w-[550px] text-black text-2xl sm:text-3xl lg:text-4xl font-medium" animation="slideLeft" as="h2">
+                  Soluções versáteis e eficazes para a real necessidade do cliente
+                </TextAnimate>
               </div>
 
               <Button variant='link' asChild>
@@ -156,15 +154,17 @@ export default function HomePage() {
           <div className="max-w-md sm:max-w-4xl -mt-0 lg:-mt-[171px] py-14 lg:py-0">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div className="w-16 lg:w-20 h-0.5 bg-[#282828]"></div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium animated-text">QUEM SOMOS</h2>
-              {/* <AnimatedText text="QUEM SOMOS" className="text-[#282828] text-2xl sm:text-3xl font-bold" as="h2" /> */}
+              <TextAnimate className="text-2xl sm:text-3xl lg:text-4xl text-black font-medium animated-text" animation="slideUp" by="word" as='h2'>
+                QUEM SOMOS
+              </TextAnimate>
             </div>
-            <p className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <TextAnimate className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8" animation="fadeIn" by="line" as="p">
               A Greenew é uma agência de propaganda 360° capaz de atender diversas demandas de marketing. Conta com
               equipe criativa, apaixonada e sobretudo focada em resolver com excelência as necessidades das empresas com
               que trabalhamos. Nossos profissionais realizam campanhas que concretizam o resultado desejado pelas
               empresas que solicitam nossos serviços.
-            </p>
+            </TextAnimate>
+
             <Button variant='link' asChild>
               <Link href='/quem-somos' className="block font-poppins font-light">
                 Ver mais
@@ -220,19 +220,14 @@ export default function HomePage() {
           <div className="max-w-md sm:max-w-4xl mt-0 lg:-mt-[171px]  py-14 lg:py-0">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div className="w-16 lg:w-20 h-0.5 bg-[#282828]"></div>
-
-              <h2 className="text-black text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight animated-text">Responsabilidade Socioambiental</h2>
-
-              {/* <AnimatedText
-                text="Responsabilidade Socioambiental"
-               className="text-[#282828] text-xl sm:text-2xl lg:text-4xl font-bold leading-tight animated-text"
-                as="h2"
-              /> */}
+              <TextAnimate className="text-black text-2xl sm:text-3xl lg:text-4xl font-medium leading-tight animated-text" animation="slideUp" by="word" as='h2'>
+                Responsabilidade Socioambiental
+              </TextAnimate>
             </div>
-            <p className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+            <TextAnimate className="text-[#282828] text-sm leading-relaxed mb-6 sm:mb-8" animation="fadeIn" by="line" as="p">
               Nosso compromisso em atender à crescente necessidade de revisar padrões vigentes para que o sucesso seja
               alcançado ponderando-se os impactos sociais e ambientais consequentes da atuação da empresa.
-            </p>
+            </TextAnimate>
             <Button variant='link' asChild>
               <Link href='/responsabilidade-socioambiental' className="block font-poppins font-light">
                 Ver mais
@@ -268,16 +263,13 @@ export default function HomePage() {
               <div className="max-w-md flex flex-col gap-14">
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="w-16 sm:w-20 h-0.5 bg-white"></div>
-                  {/* <AnimatedText
-                    text="Portfolio"
-                    className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold"
-                    as="h2"
-                  /> */}
-                  <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-medium animated-text">Portfolio</h2>
+                  <TextAnimate className="text-white text-2xl sm:text-3xl lg:text-4xl font-medium" animation="slideUp" by="word" as='h2'>
+                    Portfolio
+                  </TextAnimate>
 
                 </div>
                 <Button variant='link' className="w-fit" asChild>
-                  <Link href="#">
+                  <Link href="/portfolio">
                     Saiba mais
                   </Link>
                 </Button>
@@ -288,20 +280,27 @@ export default function HomePage() {
 
         {/* Centered play button - positioned absolutely to center of entire section */}
         <div className="absolute top-1/2 w-24 h-24 border border-[#ffffff33] rounded-full flex items-center justify-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors shadow-lg z-20">
-          <button className="bg-white cursor-pointer w-20 h-20 rounded-full flex items-center justify-center" onClick={() => setVideoModalOpen(true)}>
-            <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#000] ml-1" fill="currentColor" viewBox="0 0 24 24">
+          <button
+            onClick={() => setVideoModalOpen(true)}
+            className="
+              group relative w-22 h-22 flex items-center justify-center rounded-full cursor-pointer
+              transition-all duration-500 ease-in-out
+              before:content-[''] before:absolute before:top-[5px] before:bottom-[5px] before:left-[5px] before:right-[5px]
+              before:bg-white before:rounded-full
+              before:transition-all before:duration-500 before:[transition-timing-function:cubic-bezier(1,0,0,1)]
+              hover:before:scale-0 hover:before:opacity-0
+            "
+          >
+            <svg
+              className="relative z-10 w-6 h-6 sm:w-8 sm:h-8 ml-1 text-black transition-colors duration-500 group-hover:text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path d="M8 5v14l11-7z" />
             </svg>
           </button>
+
         </div>
-        {/* <button
-          onClick={() => setVideoModalOpen(true)}
-          className="cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors shadow-lg z-20"
-        >
-          <svg className="w-6 h-6 sm:w-8 sm:h-8 text-[#0a5f04] ml-1" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </button> */}
       </section>
 
       <Footer />

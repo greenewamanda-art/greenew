@@ -1,14 +1,11 @@
 "use client"
 
-import { useState } from "react"
-import Header from "@/components/header"
-import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
-import AnimatedText from "@/components/animated-text"
 import Image from "next/image"
+import { BlurFade } from "@/components/magicui/blur-fade";
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 export default function ClientesPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   const images = [
     'AbbVie_Logo_branco-min.png',
@@ -39,16 +36,12 @@ export default function ClientesPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onMenuClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="clientes" />
-
       {/* Hero Section */}
       <section className="bg-[#0a5f04] pt-[120px] pb-[40px] relative mt-[80px]">
         <div className="max-w-[1140px] mx-auto px-6 relative z-10">
-          <AnimatedText
-            text="Nossos clientes"
-            className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold text-center"
-          />
+          <TextAnimate className="text-white text-2xl sm:text-3xl lg:text-3xl font-medium text-left" animation="slideLeft" by="character" duration={1} as='h1'>
+            Nossos clientes
+          </TextAnimate>
           <h2 className="text-right text-[40px] sm:text-[70px] lg:text-[100px] stroke font-poppins absolute right-2 -bottom-[60px] sm:right-[50px] sm:-bottom-[80px]">Clientes</h2>
         </div>
       </section>
@@ -82,21 +75,22 @@ export default function ClientesPage() {
         <div className="max-w-[1140px] mx-auto px-6">
           {/* Row 1 */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-8 lg:mb-16 items-center max-w-[1027px] mx-auto">
-            {images.map((image,i) => {
+            {/* <BlurFade delay={0.25 + idx * 0.05} inView> */}
+            {images.map((image, i) => {
               return (
                 <div className="flex justify-center" key={i}>
-                  <Image
-                    width={169}
-                    height={50}
-                    src={`/clientes/${image}`}
-                    alt="AbbVie"
-                    className="w-full "
-                  />
-
+                  <BlurFade delay={0.25 + i * 0.05} inView>
+                    <Image
+                      width={169}
+                      height={50}
+                      src={`/clientes/${image}`}
+                      alt="AbbVie"
+                      className="w-full"
+                    />
+                  </BlurFade>
                 </div>
               )
             })}
-
           </div>
         </div>
       </section>

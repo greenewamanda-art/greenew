@@ -7,22 +7,18 @@ import Footer from "@/components/footer"
 import ParticleBackground from "@/components/particle-background"
 import AnimatedText from "@/components/animated-text"
 import Image from "next/image"
+import { TextAnimate } from "@/components/magicui/text-animate"
 
 export default function QuemSomos() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <div className="min-h-screen bg-white">
-      <Header onMenuClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="quem-somos" />
-
       {/* Hero Section */}
-
       <section className="bg-[#0a5f04] pt-[120px] pb-[40px] relative mt-[80px]">
         <div className="max-w-[1140px] mx-auto px-6 relative z-10">
-          <h1 className="text-white text-lg lg:text-3xl font-poppins font-medium text-left">
-            A Greenew é uma agência de<br className="hidden sm:block"></br> propaganda 360
-          </h1>
+          <TextAnimate className="max-w-[410px] text-white text-2xl sm:text-3xl lg:text-3xl font-poppins font-medium text-left" animation="slideLeft" by="character" duration={1} as='h1'>
+          A Greenew é uma agência de propaganda 360
+          </TextAnimate>
           <h2 className="text-right text-[40px] sm:text-[70px] lg:text-[100px] stroke font-poppins absolute right-2 -bottom-[60px] sm:right-[30px] sm:-bottom-[90px]">Quem somos
           </h2>
         </div>
@@ -40,7 +36,7 @@ export default function QuemSomos() {
           }}
         >
           <div
-            className="absolute inset-0"
+            className="absolute inset-0" 
             style={{
               backgroundColor: "#0a5f04",
               opacity: 0.7,

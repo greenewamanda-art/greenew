@@ -1,51 +1,19 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
-import Header from "@/components/header"
-import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
-import AnimatedText from "@/components/animated-text"
 import Image from "next/image"
+import Form from "./components/form"
+import { TextAnimate } from "@/components/magicui/text-animate"
 
 export default function ContatoPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    mensagem: "",
-  })
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <Header onMenuClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="contato" />
-
       {/* Hero Section */}
-
-
       <section className="bg-[#0a5f04] pt-[120px] pb-[40px] relative mt-[80px]">
         <div className="max-w-[1140px] mx-auto px-6 relative z-10">
-          <h1 className="text-white text-2xl sm:text-3xl lg:text-3xl text-left font-poppins font-medium">Entre em contato com a Greenew</h1>
-          {/* <AnimatedText
-            text="Entre em contato com a Greenew"
-            className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold text-center"
-          /> */}
+          <TextAnimate className="text-white text-2xl sm:text-3xl lg:text-3xl font-poppins font-medium text-left" animation="slideLeft" by="character" duration={1} as='h1'>
+            Entre em contato com a Greenew
+          </TextAnimate>
           <h2 className="text-right text-[40px] sm:text-[70px] lg:text-[100px] stroke font-poppins absolute right-2 -bottom-[60px] sm:right-[50px] sm:-bottom-[80px]">Contato</h2>
         </div>
       </section>
@@ -86,54 +54,12 @@ export default function ContatoPage() {
           {/* Left Side - Contact Form */}
           <div className="w-full lg:w-1/2 flex items-center justify-end sm:justify-start lg:justify-end p-4">
             <div className="w-full sm:max-w-full lg:max-w-md mt-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <input
-                    type="text"
-                    name="nome"
-                    placeholder="Nome"
-                    value={formData.nome}
-                    onChange={handleInputChange}
-                    className="w-full p-5 bg-transparent border-2 border-white text-white placeholder-white/70 rounded-sm focus:outline-none focus:border-white/90"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full p-5 bg-transparent border-2 border-white text-white placeholder-white/70 rounded-sm focus:outline-none focus:border-white/90"
-                    required
-                  />
-                </div>
-                <div>
-                  <textarea
-                    name="mensagem"
-                    placeholder="Mensagem"
-                    value={formData.mensagem}
-                    onChange={handleInputChange}
-                    rows={4}
-                    className="w-full p-5 bg-transparent border-2 border-white text-white placeholder-white/70 rounded-sm focus:outline-none focus:border-white/90 resize-none"
-                    required
-                  />
-                </div>
-                <div className="flex justify-center mx-auto">
-                  <button
-                    type="submit"
-                    className="w-[200px] bg-white text-[#333333] p-5 rounded-sm hover:bg-gray-100 transition-colors font-poppins"
-                  >
-                    Enviar
-                  </button>
-                </div>
-              </form>
+              <Form />
             </div>
           </div>
 
           {/* Right Side - Map and Contact Info */}
-          <div className="w-full lg:w-1/2 flex flex-col justify-center p-4 sm:-mt-20">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center p-4 lg:-mt-20">
             {/* Google Maps Embed */}
             <div className="mb-8 w-full lg:w-[510px] sm:mt-[90px] lg:mt-0">
               <iframe
@@ -171,11 +97,9 @@ export default function ContatoPage() {
 
           <div className="absolute bottom-7 w-full flex -z-1">
             <div className="w-full lg:w-1/2 flex items-start justify-center">
-              <Image width={200} height={200} className="w-[271px]"  src="/folha3.png" alt="Green leaf"/>
-              
+              <Image width={200} height={200} className="w-[271px]" src="/folha3.png" alt="Green leaf" />
             </div>
             <div className="w-full lg:w-1/2 flex items-start justify-left">
-
             </div>
           </div>
         </div>

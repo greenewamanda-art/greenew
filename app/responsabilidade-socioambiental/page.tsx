@@ -1,50 +1,18 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import Header from "@/components/header"
-import Sidebar from "@/components/sidebar"
-import AnimatedText from "@/components/animated-text"
 import Footer from "@/components/footer"
 import Image from "next/image"
+import { TextAnimate } from "@/components/magicui/text-animate"
 
 export default function SocioambientalPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [scrollProgress, setScrollProgress] = useState(0)
-  const [showScrollButton, setShowScrollButton] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = Math.min(scrollTop / docHeight, 1)
-
-      setScrollProgress(progress)
-      setShowScrollButton(scrollTop > 100)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <Header onMenuClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="Socioambiental" />
-
       {/* Hero Section */}
       <section className="bg-[#0a5f04] pt-[120px] pb-[40px] relative mt-[80px]">
         <div className="max-w-[1140px] mx-auto px-6 relative z-10">
-          <h2 className="text-white text-[20px] sm:text-3xl lg:text-3xl font-poppins font-medium text-left">Realizamos o plantio de árvores em<br className="hidden sm:block"></br> áreas de proteção ambiental</h2>
-          {/* <AnimatedText
-            text="Realizamos o plantio de árvores em áreas de proteção ambiental"
-            className="text-white text-2xl sm:text-3xl lg:text-3xl font-bold text-center"
-          /> */}
+          <TextAnimate className="sm:max-w-[570px] text-white text-[20px] sm:text-3xl lg:text-3xl font-poppins font-medium text-left" animation="slideLeft" by="character" duration={1} as='h1'>
+            Realizamos o plantio de árvores em áreas de proteção ambiental
+          </TextAnimate>
           <h2 className="text-right text-[34px] sm:text-[70px] lg:text-[100px] stroke font-poppins absolute right-3 -bottom-[80px] sm:-right-[10px] sm:-bottom-[210px]">
             Responsabilidade <br></br>
             Socioambiental

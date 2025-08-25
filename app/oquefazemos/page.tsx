@@ -1,25 +1,18 @@
 "use client"
 
-import Header from "@/components/header"
-import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
-import { useState } from "react"
 import Image from "next/image"
+import { TextAnimate } from "@/components/magicui/text-animate"
 
 export default function OQueFazemosPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-
   return (
     <div className="min-h-screen">
-      <Header onMenuClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="oquefazemos" />
-
       {/* Hero Section with Particles */}
       <section className="bg-[#0a5f04] pt-[120px] pb-[40px] relative mt-[80px]">
         <div className="max-w-[1140px] mx-auto px-6 relative z-10">
-          <h1 className="text-white text-lg lg:text-2xl font-bold text-left">
-            Pensamos no futuro, por isso adotamos<br className="hidden sm:block"></br> e buscamos propor soluções<br className="hidden sm:block"></br> sustentáveis que respeite as questões<br className="hidden sm:block"></br> socioambientais
-          </h1>
+          <TextAnimate className="max-w-[610px] text-white text-2xl sm:text-3xl lg:text-3xl font-poppins font-medium text-left" animation="slideLeft" by="character" duration={1} as='h1'>
+            Pensamos no futuro, por isso adotamos e buscamos propor soluções sustentáveis que respeite as questões socioambientais
+          </TextAnimate>
           <h2 className="text-right text-[40px] sm:text-[70px] lg:text-[100px] stroke font-poppins absolute right-2 -bottom-[60px] sm:right-[30px] sm:-bottom-[100px]">O que fazemos?
           </h2>
         </div>
@@ -39,8 +32,6 @@ export default function OQueFazemosPage() {
           }}
         />
       </div>
-
-
 
 
       {/* Digital & Social Section */}
@@ -77,7 +68,7 @@ export default function OQueFazemosPage() {
         {/* Left Side - Content */}
         <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
           <div className="w-full">
-            <h3 className="text-[#029fe3] text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Newcontent & video</h3>
+            <h3 className="text-[#029fe3] text-3xl sm:text-4xl lg:text-5xl font-medium mb-6">Newcontent & video</h3>
             <p className="text-white text-base sm:text-lg leading-relaxed">Nossa equipe conta com profissionais experientes na produção de conteúdo e vídeos. Produzimos vídeos institucionais com captação de imagens, vídeos com animação e vídeos produzidos em estúdio para serem veiculados em variados meios de comunicação.</p>
           </div>
         </div>

@@ -2,14 +2,17 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 interface SidebarProps {
   isOpen: boolean
   onClose: () => void
-  currentPage?: string
 }
 
-export default function Sidebar({ isOpen, onClose, currentPage = "" }: SidebarProps) {
+export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+
+  const path = usePathname()
+
   return (
     <>
       {isOpen && <div className="fixed inset-0 bg-black/50 z-51" onClick={onClose} />}
@@ -29,58 +32,34 @@ export default function Sidebar({ isOpen, onClose, currentPage = "" }: SidebarPr
         <nav className="pt-16 px-8">
           <ul className="space-y-3">
             <li>
-              <a
-                href="/"
-                className={`text-2xl font-bold  font-poppins transition-colors ${currentPage === "home" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"
-                  }`}
-              >
+              <Link href='/' onClick={onClose} className={`text-2xl font-bold  font-poppins transition-colors ${path === "/" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"}`}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/quem-somos"
-                className={`text-2xl font-bold font-poppins transition-colors ${currentPage === "quem-somos" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"
-                  }`}
-              >
+              <Link href='/quem-somos' onClick={onClose} className={`text-2xl font-bold  font-poppins transition-colors ${path === "/quem-somos" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"}`}>
                 Quem somos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/responsabilidade-socioambiental"
-                className={`text-2xl font-bold font-poppins transition-colors ${currentPage === "Socioambiental" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"
-                  }`}
-              >
+              <Link href='/responsabilidade-socioambiental' onClick={onClose} className={`text-2xl font-bold  font-poppins transition-colors ${path === "/responsabilidade-socioambiental" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"}`}>
                 Socioambiental
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/contato"
-                className={`text-2xl font-bold font-poppins transition-colors ${currentPage === "contato" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"
-                  }`}
-              >
+              <Link href='/contato' onClick={onClose} className={`text-2xl font-bold  font-poppins transition-colors ${path === "/contato" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"}`}>
                 Fale Conosco
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/oquefazemos"
-                className={`text-2xl font-bold font-poppins transition-colors ${currentPage === "oquefazemos" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"
-                  }`}
-              >
+              <Link href='/oquefazemos' onClick={onClose} className={`text-2xl font-bold  font-poppins transition-colors ${path === "/oquefazemos" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"}`}>
                 O que fazemos
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="/clientes"
-                className={`text-2xl font-bold font-poppins transition-colors ${currentPage === "clientes" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"
-                  }`}
-              >
+              <Link href='/clientes' onClick={onClose} className={`text-2xl font-bold  font-poppins transition-colors ${path === "/clientes" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"}`}>
                 Clientes
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -88,7 +67,7 @@ export default function Sidebar({ isOpen, onClose, currentPage = "" }: SidebarPr
         <div className="absolute sm:bottom-36 bottom-28 pt-16 px-8 w-full">
           <div className="space-y-3 text-black">
             <div className="border-b border-black">
-              <p className="text-sm sm:text-base">Telefone: +55 11 98564 4535</p>
+              <p className="text-sm sm:text-base">WhatsApp: +55 11 98564 4535</p>
             </div>
             <div className="border-b border-black">
               <p className=" text-sm sm:text-base">
@@ -98,7 +77,7 @@ export default function Sidebar({ isOpen, onClose, currentPage = "" }: SidebarPr
             <p className="text-sm sm:text-base">E-mail: atendimento@greenewgroup.com</p>
           </div>
 
-          <Button variant='link' asChild>
+          <Button variant='link' asChild onClick={onClose}>
             <Link href='/politica-de-privacidade' className="block font-poppins font-light">
               Política de privacidade
             </Link>

@@ -1,39 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import Header from "@/components/header"
-import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
 
 export default function PoliticaPrivacidade() {
-  const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [scrollProgress, setScrollProgress] = useState(0)
-  const [showScrollButton, setShowScrollButton] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight
-      const progress = Math.min(scrollTop / docHeight, 1)
-
-      setScrollProgress(progress)
-      setShowScrollButton(scrollTop > 100)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
   return (
     <div className="min-h-screen bg-white">
-      <Header onMenuClick={() => setSidebarOpen(true)} />
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} currentPage="politica" />
-
       {/* Hero Section */}
       <section className="bg-black py-12 sm:py-16 lg:py-20 mt-[80px] hidden">
         <div className="max-w-[1140px] mx-auto px-6">
