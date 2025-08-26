@@ -12,11 +12,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     resend.emails.send({
-      from, 
+      from: 'atendimento@greenewgroup.com', 
       to: process.env.SMTP_TO!,
       subject: `Contato Site - ${name}`,
       replyTo: from,

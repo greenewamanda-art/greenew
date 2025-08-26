@@ -15,14 +15,8 @@ export const metadata: Metadata = {
 
 export default function OQueFazemosPage() {
 
-  const images = [
-    '1.png',
-    '2.png',
-    '3.png',
-    '4.png',
-    '5.png',
-    '6.png'
-  ]
+  const images = Array.from({ length: 80 }, (_, i) => i + 1);
+
 
   return (
     <div className="min-h-screen">
@@ -52,11 +46,11 @@ export default function OQueFazemosPage() {
         <div className="max-w-[1140px] mx-auto px-6 py-4">
           <Carousel orientation="vertical">
             <CarouselContent className="h-[230px] sm:h-[410px]">
-              {images.map((img, i) => {
+              {images.map((i) => {
                 return (
                   <CarouselItem key={i} className="flex justify-center">
                     <Image
-                      src={`/portfolio/${img}`}
+                      src={`/portfolio/${i}.png`}
                       width={600}
                       height={400}
                       alt=""
