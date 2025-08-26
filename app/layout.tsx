@@ -41,7 +41,17 @@ export const metadata: Metadata = {
 
       }
     ]
-  }
+  },
+  robots: {
+    index: true,   
+    follow: true, 
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    },
+  },
 }
 
 
@@ -61,10 +71,10 @@ html {
         `}</style>
       </head>
       <body>
-        <ContentHeader/>
+        <ContentHeader />
         <Cursor />
         {children}
-        <Toaster richColors position="top-center"/>
+        <Toaster richColors position="top-center" />
       </body>
     </html>
   )
