@@ -6,6 +6,7 @@ import Cursor from "@/components/cursor"
 import { Toaster } from "@/components/ui/sonner"
 import { Metadata } from "next"
 import ContentHeader from "@/components/content-header"
+import Script from "next/script"
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -43,8 +44,8 @@ export const metadata: Metadata = {
     ]
   },
   robots: {
-    index: true,   
-    follow: true, 
+    index: true,
+    follow: true,
     googleBot: {
       index: true,
       follow: true,
@@ -63,11 +64,26 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${nunito.variable} ${poppins.variable}`}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-195HBF0FR1"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-195HBF0FR1', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         <style>{`
-html {
-  --font-nunito: ${nunito.style.fontFamily};
-  --font-poppins: ${poppins.style.fontFamily};
-}
+          html {
+            --font-nunito: ${nunito.style.fontFamily};
+            --font-poppins: ${poppins.style.fontFamily};
+          }
         `}</style>
       </head>
       <body>
