@@ -1,13 +1,28 @@
-"use client"
-
 import Footer from "@/components/footer"
-import { useState } from "react"
 import Image from "next/image"
 import { TextAnimate } from "@/components/magicui/text-animate"
-import { Card, CardContent } from "@/components/ui/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Portfolio - Greenew",
+  description: "Conheça os cases de sucesso da nossa agência de publicidade. Estratégias criativas que geraram resultados reais para marcas de diferentes segmentos.",
+  openGraph: {
+    url: "https://greenew.com.br/portfolio"
+  }
+}
+
 
 export default function OQueFazemosPage() {
+
+  const images = [
+    '1.png',
+    '2.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png'
+  ]
 
   return (
     <div className="min-h-screen">
@@ -36,25 +51,20 @@ export default function OQueFazemosPage() {
         {/* Left Side - Image */}
         <div className="max-w-[1140px] mx-auto px-6 py-4">
           <Carousel orientation="vertical">
-            <CarouselContent className="h-[220px] sm:h-[410px]">
-              <CarouselItem className="flex justify-center">
-                <Image
-                  src="/portfolio/1.png"
-                  width={600}
-                  height={400}
-                  alt=""
-                  className=""
-                />
-              </CarouselItem>
-              <CarouselItem className="flex justify-center">
-                <Image
-                  src="/portfolio/2.png"
-                  width={600}
-                  height={400}
-                  alt=""
-                  className=""
-                />
-              </CarouselItem>
+            <CarouselContent className="h-[230px] sm:h-[410px]">
+              {images.map((img, i) => {
+                return (
+                  <CarouselItem key={i} className="flex justify-center">
+                    <Image
+                      src={`/portfolio/${img}`}
+                      width={600}
+                      height={400}
+                      alt=""
+                      className=""
+                    />
+                  </CarouselItem>
+                )
+              })}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -62,10 +72,6 @@ export default function OQueFazemosPage() {
 
         </div>
       </section>
-
-
-
-
       <Footer />
     </div>
   )

@@ -7,9 +7,7 @@ export async function POST(req: NextRequest) {
     const { name, from, message } = await req.json();
 
     const transportOptions: SMTPTransport.Options = {
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: true,
+      service: 'gmail',
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -21,9 +19,9 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail({
        from: `GREENEW ${from}`,
        replyTo: from,
-       to: 'willianpereira0912@gmail.com',
+       to: process.env.SMTP_TO,
        subject: 'Contato Site',
-       html: `nome: ${name} <br> email: ${from} <br> mensagem: ${message}`,
+       html: `Nome: ${name} <br> E-mail: ${from} <br> Mensagem: ${message}`,
      });
 
     return NextResponse.json({ message: 'Email enviado com sucesso!', status: true,  }, { status: 200 });

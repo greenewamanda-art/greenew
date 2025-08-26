@@ -24,7 +24,23 @@ export const metadata: Metadata = {
   title: "Greenew - Agencia de propaganda 360°",
   description: "A Greenew é uma agência de propaganda 360º capaz de atender diversas demandas de marketing. Conta com equipe criativa",
   icons: {
-    icon: "https://greenew.com.br/wp-content/uploads/2021/06/cropped-greenewgroup-192x192.png",
+    icon: "/icon.png",
+  },
+  openGraph: {
+    title: "Greenew",
+    url: "https://greenew.com.br/",
+    description: "A Greenew é uma agência de propaganda 360º capaz de atender diversas demandas de marketing. Conta com equipe criativa",
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: '/greenew-logo.png',
+        alt: "Greenew",
+        width: 267,
+        height: 86,
+
+      }
+    ]
   }
 }
 

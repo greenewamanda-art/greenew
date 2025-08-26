@@ -1,6 +1,14 @@
-"use client"
-
 import Footer from "@/components/footer"
+import { Metadata } from "next"
+
+
+export const metadata: Metadata = {
+  title: "Política de privacidade - Greenew",
+  description: "Quem somos O endereço do nosso site é: https://greenew.com.br. Comentários Quando os visitantes deixam comentários no site, coletamos os dados mostrados no formulário de comentários, além do endereço de IP e de dados do navegador do visitante, para auxiliar na detecção de spam. Uma sequência anonimizada de caracteres criada a partir do seu e-mail (também...",
+  openGraph: {
+    url: "https://greenew.com.br/politica-de-privacidade"
+  }
+}
 
 export default function PoliticaPrivacidade() {
   return (

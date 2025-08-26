@@ -1,9 +1,17 @@
-"use client"
-
 import Footer from "@/components/footer"
 import Image from "next/image"
 import Form from "./components/form"
 import { TextAnimate } from "@/components/magicui/text-animate"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contato - Greenew",
+  description: "Entre em contato com a GreenewTelefone : +55 11 98564 4535 Endereço : Rua Jericó, 193 – cj. 32 – Vila Madalena São Paulo/SP - Brasil E-mail : atendimento@greenewgroup.com",
+  openGraph: {
+    url: "https://greenew.com.br/contato"
+  }
+}
+
 
 export default function ContatoPage() {
   return (

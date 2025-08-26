@@ -1,8 +1,16 @@
-"use client"
-
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { TextAnimate } from "@/components/magicui/text-animate"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Responsabilidade Socioambiental - Greenew",
+  description: "Nosso compromisso em atender à crescente necessidade de revisar padrões vigentes para que o sucesso seja alcançado ponderando-se os impactos sociais e ambientais consequentes da atuação da empresa.",
+  openGraph: {
+    url: "https://greenew.com.br/responsabilidade-socioambiental"
+  }
+}
+
 
 export default function SocioambientalPage() {
   return (

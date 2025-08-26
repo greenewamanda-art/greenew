@@ -1,9 +1,16 @@
-"use client"
-
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clientes - Greenew",
+  description: "Nosso principal ativo, fruto do nosso bom trabalho. Sabemos que a propaganda é a alma do negócio, ainda mais quando a comunicação é integrada para gerar resultados surpreendente",
+  openGraph: {
+    url: "https://greenew.com.br/clientes"
+  }
+}
 
 export default function ClientesPage() {
 
@@ -31,7 +38,10 @@ export default function ClientesPage() {
     'Shire-min.png',
     'Logo-Takeda-02-min.png',
     'Logo_UCB_RGB-02-min.png',
-    'logo-vidalink-min.png'
+    'logo-vidalink-min.png',
+    'Logo-Dr.-Reddys.png',
+    'Boehringer_Logo.png',
+    'logo-gsk.png'
   ]
 
   return (

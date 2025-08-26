@@ -2,15 +2,10 @@
 
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import Header from "@/components/header"
-import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
-import AnimatedText from "@/components/animated-text"
 import TypewriterText from "@/components/typewriter-text"
 import Link from "next/link"
 import { TextAnimate } from "@/components/magicui/text-animate";
-
-
 
 export default function HomePage() {
   const [videoModalOpen, setVideoModalOpen] = useState(false)
@@ -105,11 +100,7 @@ export default function HomePage() {
           />
 
           <div className="absolute bottom-40 sm:bottom-48 px-7 lg:px-[60px] z-10">
-            <AnimatedText
-              text="SOLUÇÕES"
-              className="text-white text-xs sm:text-sm font-medium tracking-wider mb-2 sm:mb-4"
-              as="p"
-            />
+            <p className="text-white text-xs sm:text-sm font-medium tracking-wider mb-2 sm:mb-4">SOLUÇÕES</p>
 
             <h2 className="text-white stroke font-nunito font-bold capitalize tracking-wide leading-tight text-[80px] sm:text-6xl lg:text-7xl xl:text-8xl mb-2 sm:mb-4">
               <b>New</b>
@@ -302,7 +293,6 @@ export default function HomePage() {
 
         </div>
       </section>
-
       <Footer />
     </div>
   )

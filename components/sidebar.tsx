@@ -61,10 +61,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 Clientes
               </Link>
             </li>
+            <li>
+              <Link href='/portfolio' onClick={onClose} className={`text-2xl font-bold  font-poppins transition-colors ${path === "/portfolio" ? "text-[#0a5f04]" : "text-black hover:text-[#0a5f04]"}`}>
+                Portfolio
+              </Link>
+            </li>
           </ul>
         </nav>
 
-        <div className="absolute sm:bottom-36 bottom-28 pt-16 px-8 w-full">
+        <div className="absolute sm:bottom-14 bottom-28 pt-16 px-8 w-full">
           <div className="space-y-3 text-black">
             <div className="border-b border-black">
               <p className="text-sm sm:text-base">WhatsApp: +55 11 98564 4535</p>

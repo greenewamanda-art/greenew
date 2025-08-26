@@ -1,13 +1,16 @@
-"use client"
-
-import { useState } from "react"
-import Header from "@/components/header"
-import Sidebar from "@/components/sidebar"
 import Footer from "@/components/footer"
 import ParticleBackground from "@/components/particle-background"
-import AnimatedText from "@/components/animated-text"
 import Image from "next/image"
 import { TextAnimate } from "@/components/magicui/text-animate"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Quem somos - Greenew",
+  description: "A Greenew é uma agência full-service que trabalha de maneira 360°. Somos capazes de atender diversas demandas de marketing e dessa forma desenvolvemos campanhas integradas. Desde 2011, atendemos empresas da indústria farmacêutica criando campanhas inovadoras. Eventos online e offline utilizando alta tecnologia, branding, digital, vídeos, endomarketing e outros. Contamos com uma equipe ...",
+  openGraph: {
+    url: "https://greenew.com.br/quem-somos"
+  }
+}
 
 export default function QuemSomos() {
 
@@ -17,7 +20,7 @@ export default function QuemSomos() {
       <section className="bg-[#0a5f04] pt-[120px] pb-[40px] relative mt-[80px]">
         <div className="max-w-[1140px] mx-auto px-6 relative z-10">
           <TextAnimate className="max-w-[410px] text-white text-2xl sm:text-3xl lg:text-3xl font-poppins font-medium text-left" animation="slideLeft" by="character" duration={1} as='h1'>
-          A Greenew é uma agência de propaganda 360
+            A Greenew é uma agência de propaganda 360
           </TextAnimate>
           <h2 className="text-right text-[40px] sm:text-[70px] lg:text-[100px] stroke font-poppins absolute right-2 -bottom-[60px] sm:right-[30px] sm:-bottom-[90px]">Quem somos
           </h2>
@@ -36,7 +39,7 @@ export default function QuemSomos() {
           }}
         >
           <div
-            className="absolute inset-0" 
+            className="absolute inset-0"
             style={{
               backgroundColor: "#0a5f04",
               opacity: 0.7,
@@ -87,10 +90,9 @@ export default function QuemSomos() {
           <div className="flex-1 bg-[#402315] relative">
             <div className="max-w-[1140px] mx-auto px-6 py-12 lg:py-16">
               <div className="relative z-20 text-white max-w-4xl">
-                <AnimatedText
-                  text="A Greenew é uma agência full-service que trabalha de maneira 360°. Somos capazes de atender diversas demandas de marketing e dessa forma desenvolvemos campanhas integradas. Desde 2011, atendemos empresas da indústria farmacêutica criando campanhas inovadoras. Eventos online e offline utilizando alta tecnologia, branding, digital, vídeos, endomarketing e outros. Contamos com uma equipe experiente, criativa e apaixonada. Sobretudo focada em resolver com excelência as necessidades dos nossos clientes. A Greenew é uma empresa de diversidade que pensa no futuro. Por isso, adotamos e buscamos trazer para nossos clientes soluções sustentáveis, que respeitem as questões socioambientais e as pessoas. Porque elas são a força e a vitalidade de qualquer empresa."
-                  className="text-base sm:text-lg leading-relaxed"
-                />
+                <p  className="text-base sm:text-lg leading-relaxed">
+                  A Greenew é uma agência full-service que trabalha de maneira 360°. Somos capazes de atender diversas demandas de marketing e dessa forma desenvolvemos campanhas integradas. Desde 2011, atendemos empresas da indústria farmacêutica criando campanhas inovadoras. Eventos online e offline utilizando alta tecnologia, branding, digital, vídeos, endomarketing e outros. Contamos com uma equipe experiente, criativa e apaixonada. Sobretudo focada em resolver com excelência as necessidades dos nossos clientes. A Greenew é uma empresa de diversidade que pensa no futuro. Por isso, adotamos e buscamos trazer para nossos clientes soluções sustentáveis, que respeitem as questões socioambientais e as pessoas. Porque elas são a força e a vitalidade de qualquer empresa.
+                </p>
               </div>
             </div>
           </div>

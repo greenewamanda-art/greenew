@@ -1,8 +1,16 @@
-"use client"
-
 import Footer from "@/components/footer"
 import Image from "next/image"
 import { TextAnimate } from "@/components/magicui/text-animate"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "O que fazemos? - Greenew",
+  description: "Pensamos no futuro, por isso adotamos e buscamos propor soluções sustentáveis que respeitem as questões socioambientais",
+  openGraph: {
+    url: "https://greenew.com.br/oquefazemos"
+  }
+}
+
 
 export default function OQueFazemosPage() {
   return (
@@ -41,7 +49,7 @@ export default function OQueFazemosPage() {
           <Image
             width={523}
             height={349}
-            src="/pexels-canva-studio-3194518-2048x1365.jpg"
+            src="/oque-fazemos/pexels-canva-studio-3194518-2048x1365.jpg"
             alt="People working on digital projects"
             className="w-full h-full object-cover"
           />
@@ -78,7 +86,7 @@ export default function OQueFazemosPage() {
           <Image
             width={523}
             height={349}
-            src="/newcontent-video.jpg"
+            src="/oque-fazemos/newcontent-video.jpg"
             alt="Newcontent & video"
             className="w-full h-full object-cover"
           />
@@ -92,7 +100,7 @@ export default function OQueFazemosPage() {
           <Image
             width={523}
             height={349}
-            src="/business-conference-audience.png"
+            src="/oque-fazemos/business-conference-audience.png"
             alt="Business event and conference"
             className="w-full h-full object-cover"
           />
@@ -127,7 +135,7 @@ export default function OQueFazemosPage() {
           <Image
             width={523}
             height={349}
-            src="/new-branding.jpg"
+            src="/oque-fazemos/new-branding.jpg"
             alt="New branding"
             className="w-full h-full object-cover"
           />
@@ -142,7 +150,7 @@ export default function OQueFazemosPage() {
           <Image
             width={523}
             height={349}
-            src="/new-endomarketg.jpg"
+            src="/oque-fazemos/new-endomarketg.jpg"
             alt="People working on digital projects"
             className="w-full h-full object-cover"
           />

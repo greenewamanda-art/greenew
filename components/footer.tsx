@@ -3,6 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import CookieConsent from "react-cookie-consent"
 
 export default function Footer() {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -87,6 +88,23 @@ export default function Footer() {
           </svg>
         </div>
       </button>
+
+      <CookieConsent
+        location="bottom"
+        buttonText="Aceitar"
+        declineButtonText="Recusar"
+        enableDeclineButton
+        cookieName="lgpd_cookie_consent"
+        style={{ background: "#0a5f04" }}
+        buttonStyle={{ color: "#0a5f04", background: "#f5ea8a", fontSize: "14px", borderRadius: 8 }}
+        declineButtonStyle={{ color: "#fff", background: "transparent", border: "1px solid white", fontSize: "14px", borderRadius: 8 }}
+        expires={150}
+      >
+        Este site utiliza Cookies para uma melhor experiência de uso. Ao continuar navegando, você concorda com nossas políticas de
+        <Link href="/politica-de-privacidade" className="ml-2 underline">
+          Política de Privacidade
+        </Link>.
+      </CookieConsent>
     </footer>
   )
 }

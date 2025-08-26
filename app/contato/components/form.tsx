@@ -39,7 +39,7 @@ export default function Form() {
             }).then(response => response.json())
                 .then(data => {
                     if (!data.status) {
-                        toast.error("erro ao enviar email")
+                        toast.error("Erro ao enviar e-mail")
                         return
                     }
                     toast.success("Email enviado com sucesso!")
@@ -50,7 +50,7 @@ export default function Form() {
                     })
                 })
         } catch (error) {
-            toast.error("erro ao enviar email")
+            toast.error("Erro ao enviar e-mail")
         }
     }
 
