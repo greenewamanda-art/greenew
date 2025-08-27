@@ -57,23 +57,14 @@ export default function HomePage() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/WMSO07BjGEY?controls=0&modestbranding=1"
+              src="https://www.youtube.com/embed/WMSO07BjGEY?controls=0&modestbranding=1&autoplay=1&mute=1"
               title="Video Greenew"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
+              frameborder="0"
+              allow="autoplay; encrypted-media"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
               className="w-full h-full rounded-lg"
             />
-
-            {/* <video
-              src="https://www.youtube.com/watch?v=WMSO07BjGEY"
-              autoPlay
-              muted
-              playsInline
-              loop
-              className="w-full h-full rounded-lg shadow-2xl"
-            ></video> */}
           </div>
         </div>
       </section>
