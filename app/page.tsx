@@ -57,7 +57,7 @@ export default function HomePage() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/WMSO07BjGEY?controls=0&modestbranding=1&autoplay=1&mute=1"
+              src="https://www.youtube.com/embed/WMSO07BjGEY?controls=0&modestbranding=1&autoplay=1&mute=1&loop=1&playlist=WMSO07BjGEY&rel=0"
               title="Video Greenew"
               frameborder="0"
               allow="autoplay; encrypted-media"
@@ -242,7 +242,7 @@ export default function HomePage() {
         <div className="w-full">
           <div className="max-w-[1140px] mx-auto px-6 h-full">
             <div className="relative z-10 flex flex-col justify-center h-full min-h-[400px] sm:min-h-[500px]">
-              <div className="max-w-md flex flex-col gap-14">
+              <div className="max-w-md flex flex-col gap-10">
                 <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="w-16 sm:w-20 h-0.5 bg-white"></div>
                   <TextAnimate className="text-white text-2xl sm:text-3xl lg:text-4xl font-medium" animation="slideUp" by="word" as='h2'>
@@ -261,7 +261,7 @@ export default function HomePage() {
         </div>
 
         {/* Centered play button - positioned absolutely to center of entire section */}
-        <div className="absolute top-1/2 w-24 h-24 border border-[#ffffff33] rounded-full flex items-center justify-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors shadow-lg z-20">
+        {/* <div className="absolute top-1/2 w-24 h-24 border border-[#ffffff33] rounded-full flex items-center justify-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors shadow-lg z-20">
           <button
             onClick={() => setVideoModalOpen(true)}
             className="
@@ -282,7 +282,7 @@ export default function HomePage() {
             </svg>
           </button>
 
-        </div>
+        </div> */}
       </section>
       <Footer />
     </div>
