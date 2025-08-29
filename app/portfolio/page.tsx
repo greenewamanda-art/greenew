@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function OQueFazemosPage() {
 
-  const images = Array.from({ length: 80 }, (_, i) => i + 1);
+  const images = Array.from({ length: 81 }, (_, i) => i + 1);
 
 
   return (
