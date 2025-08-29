@@ -1,15 +1,11 @@
-"use client"
 
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
 import Footer from "@/components/footer"
 import TypewriterText from "@/components/typewriter-text"
 import Link from "next/link"
 import { TextAnimate } from "@/components/magicui/text-animate";
 
 export default function HomePage() {
-  const [videoModalOpen, setVideoModalOpen] = useState(false)
-
   const services = [
     { text: "Digital & social", color: "#0169B8" },
     { text: "Content & video", color: "#00A0E6" },
@@ -20,36 +16,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen sm:mt-[80px] mt-0">
-      {videoModalOpen && (
-        <div
-          className="fixed inset-0  bg-black/80 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
-          onClick={() => setVideoModalOpen(false)}
-        >
-          <div
-            className="relative w-full max-w-4xl aspect-video animate-in zoom-in-95 duration-300"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setVideoModalOpen(false)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 text-2xl font-bold z-10 transition-colors"
-            >
-              ×
-            </button>
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/WMSO07BjGEY?autoplay=1&mute=1"
-              title="Portfolio Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="w-full h-full rounded-lg shadow-2xl"
-            />
-          </div>
-        </div>
-      )}
-
       {/* YouTube Video */}
       <section className="bg-[#282828] py-8 sm:py-20 pt-20 mt-[100px] sm:mt-0">
         <div className="w-full  sm:px-0">
@@ -259,30 +225,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        {/* Centered play button - positioned absolutely to center of entire section */}
-        {/* <div className="absolute top-1/2 w-24 h-24 border border-[#ffffff33] rounded-full flex items-center justify-center left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-colors shadow-lg z-20">
-          <button
-            onClick={() => setVideoModalOpen(true)}
-            className="
-              group relative w-22 h-22 flex items-center justify-center rounded-full cursor-pointer
-              transition-all duration-500 ease-in-out
-              before:content-[''] before:absolute before:top-[5px] before:bottom-[5px] before:left-[5px] before:right-[5px]
-              before:bg-white before:rounded-full
-              before:transition-all before:duration-500 before:[transition-timing-function:cubic-bezier(1,0,0,1)]
-              hover:before:scale-0 hover:before:opacity-0
-            "
-          >
-            <svg
-              className="relative z-10 w-6 h-6 sm:w-8 sm:h-8 ml-1 text-black transition-colors duration-500 group-hover:text-white"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </button>
-
-        </div> */}
       </section>
       <Footer />
     </div>
