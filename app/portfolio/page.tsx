@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function OQueFazemosPage() {
 
-  const images = Array.from({ length: 80 }, (_, i) => i + 1).filter((i) => i !== 37);
+  const images = Array.from({ length: 77 }, (_, i) => i + 1)
 
 
   return (
@@ -50,7 +50,7 @@ export default function OQueFazemosPage() {
                 return (
                   <CarouselItem key={i} className="flex justify-center">
                     <Image
-                      src={`/portfolio/${i}.png`}
+                      src={`/portfolio/Slide${i}.jpeg`}
                       width={600}
                       height={400}
                       alt=""
