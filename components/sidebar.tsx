@@ -72,7 +72,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div className="absolute sm:bottom-9 bottom-12 pt-16 px-8 w-full -z-[1]">
           <div className="space-y-3 text-black">
             <div className="border-b border-black">
-              <p className="text-sm sm:text-base">WhatsApp: +55 11 98564 4535</p>
+              <p className="text-sm sm:text-base">WhatsApp: +55 11 98564-4535</p>
             </div>
             <div className="border-b border-black">
               <p className=" text-sm sm:text-base">
