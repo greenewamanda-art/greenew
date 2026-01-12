@@ -79,6 +79,8 @@ export default function RootLayout({
             });
           `}
         </Script>
+        <Script src="https://embeds.iubenda.com/widgets/f9149a16-77c3-48ff-bd44-ca9084a7dcdc.js" />
+
         <style>{`
           html {
             --font-nunito: ${nunito.style.fontFamily};
