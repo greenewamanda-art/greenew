@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
       </button>
 
-      <CookieConsent
+      {/* <CookieConsent
         location="bottom"
         buttonText="Aceitar"
         declineButtonText="Recusar"
@@ -104,7 +104,7 @@ export default function Footer() {
         <Link href="/politica-de-privacidade" className="ml-2 underline">
           Política de Privacidade
         </Link>.
-      </CookieConsent>
+      </CookieConsent> */}
     </footer>
   )
 }
