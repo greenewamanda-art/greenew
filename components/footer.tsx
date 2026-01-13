@@ -50,7 +50,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row lg:flex-row justify-between items-center gap-4 sm:gap-6">
           <div className="flex items-center">
-            <Image width={180} height={180} src="/dpo-logo.png" alt="DPO Oficial" className="w-[180px] rounded-full" />
+            <Image width={250} height={175} src="/dpo-logo.png" alt="DPO Oficial" className="w-full" />
           </div>
 
           <div className="text-[#282828] text-xs sm:text-sm font-medium text-center">
