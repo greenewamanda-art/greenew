@@ -20,7 +20,7 @@ export default function SocioEnvironmentalSection() {
       />
 
       <Image
-        src="/home/socio-photo.jpg"
+        src="/home/socio-photo.png"
         alt="Ação socioambiental da Greenew"
         width={3647}
         height={4085}
