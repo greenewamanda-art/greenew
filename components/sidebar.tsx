@@ -46,43 +46,25 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 onClick={onClose}
                 className={`text-2xl font-bold  font-avant transition-colors ${path === "/" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
               >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#quem-somos"
-                onClick={onClose}
-                className={`text-2xl font-bold  font-avant transition-colors ${path === "/quem-somos" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
-              >
-                Quem somos
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#responsabilidade-socioambiental"
-                onClick={onClose}
-                className={`text-2xl font-bold  font-avant transition-colors ${path === "/responsabilidade-socioambiental" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
-              >
-                Socioambiental
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#contato"
-                onClick={onClose}
-                className={`text-2xl font-bold  font-avant transition-colors ${path === "/contato" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
-              >
-                Fale Conosco
+                Agencia
               </Link>
             </li>
             <li>
               <Link
                 href="/#oquefazemos"
                 onClick={onClose}
-                className={`text-2xl font-bold  font-avant transition-colors ${path === "/oquefazemos" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
+                className={`text-2xl font-bold  font-avant transition-colors ${path === "/quem-somos" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
               >
-                O que fazemos
+                O Que fazemos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#socioambiental"
+                onClick={onClose}
+                className={`text-2xl font-bold  font-avant transition-colors ${path === "/responsabilidade-socioambiental" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
+              >
+                Socioambiental
               </Link>
             </li>
             <li>
@@ -101,6 +83,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 className={`text-2xl font-bold  font-avant transition-colors ${path === "/portfolio" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
               >
                 Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#contato"
+                onClick={onClose}
+                className={`text-2xl font-bold  font-avant transition-colors ${path === "/contato" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
+              >
+                Contato
               </Link>
             </li>
           </ul>
