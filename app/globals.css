@@ -3,6 +3,29 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url("/fontes/ITCAvantGardeGothic-Medium.woff2") format("woff2"),
+    url("/fontes/ITCAvantGardeGothic-Medium.woff") format("woff"),
+    url("/fontes/ITCAvantGardeGothic-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ITC Avant Garde Gothic";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url("/fontes/ITCAvantGardeGothic-Bold.woff2") format("woff2"),
+    url("/fontes/ITCAvantGardeGothic-Bold.woff") format("woff"),
+    url("/fontes/ITCAvantGardeGothic-Bold.ttf") format("truetype");
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -29,6 +52,10 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
+
+  --font-avant-garde:
+    "ITC Avant Garde Gothic", "Century Gothic", "URW Gothic", sans-serif;
+
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -37,6 +64,28 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+
+  --brand-green-deep: #214222;
+  --brand-green-border: #226734;
+  --brand-olive: #cac898;
+  --brand-cream: #edeadf;
+  --brand-brown: #CAC898;
+  --brand-nav-gray: #848484;
+
+  /* Acentos usados nos títulos das seções de "O que fazemos". */
+  --brand-blue: #029fe3;
+  --brand-yellow: #fab904;
+  --brand-pink: #ed6fa7;
+
+  /* Neutros de apoio. */
+  --brand-tan: #b19777;
+  --brand-ink: #090909;
+  --brand-gray-dark: #333333;
+  --brand-gray-stroke: #555555;
+
+  --brand-shadow: rgba(7, 79, 8, 0.2);
+  --brand-shadow-header: rgba(7, 79, 8, 0.14);
 }
 
 .dark {
@@ -75,9 +124,11 @@
 }
 
 @theme inline {
-  /* Adding Nunito font configuration */
-  --font-nunito: var(--font-nunito);
-  --font-poppins: var(--font-poppins);
+  /* ITC Avant Garde Gothic é a fonte padrão: `--font-sans` faz o Tailwind usá-la
+   * em `font-sans` e nos defaults, e `--font-avant` expõe a classe `font-avant`
+   * para quando for preciso declarar explicitamente. */
+  --font-sans: var(--font-avant-garde);
+  --font-avant: var(--font-avant-garde);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -114,6 +165,31 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-brand-green-deep: var(--brand-green-deep);
+  --color-brand-green-border: var(--brand-green-border);
+  --color-brand-olive: var(--brand-olive);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-brown: var(--brand-brown);
+  --color-brand-nav-gray: var(--brand-nav-gray);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-tan: var(--brand-tan);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-gray-dark: var(--brand-gray-dark);
+  --color-brand-gray-stroke: var(--brand-gray-stroke);
+}
+
+/*
+ * Home page canvas.
+ * The Figma artboard is 1920px wide. `--u` is "one design pixel": it equals 1px
+ * once the canvas reaches its 1920px cap and shrinks proportionally below that,
+ * so the desktop layout stays faithful at every width from `lg` upwards.
+ */
+.design-canvas {
+  container-type: inline-size;
+  --u: calc(100cqw / 1920);
 }
 
 @layer base {
@@ -123,16 +199,14 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-avant-garde);
+    font-weight: 500;
     /* cursor: none; */
   }
 }
 
-
-
 /* Adding floating particle animation for the O que fazemos page */
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px) translateX(0px);
@@ -196,16 +270,12 @@
   animation-delay: calc(60ms * var(--char-index));
 }
 
-
-
-
-
 .btn-arrow span {
   display: block;
   width: 20px;
   height: 20px;
   border-bottom: 2px solid #f5ea8a; /* cor ajustada */
-  border-right: 2px solid #f5ea8a;  /* cor ajustada */
+  border-right: 2px solid #f5ea8a; /* cor ajustada */
   transform: rotate(45deg);
   margin: 0px; /* mais espaço entre as setas */
   animation: animate 2s infinite;
@@ -234,4 +304,6 @@
   }
 }
 
-
+html {
+  scroll-behavior: smooth;
+}

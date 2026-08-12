@@ -1,6 +1,4 @@
 import type React from "react"
-import { Nunito } from "next/font/google"
-import { Poppins } from "next/font/google"
 import "./globals.css"
 import Cursor from "@/components/cursor"
 import { Toaster } from "@/components/ui/sonner"
@@ -8,24 +6,11 @@ import { Metadata } from "next"
 import ContentHeader from "@/components/content-header"
 import Script from "next/script"
 
-const nunito = Nunito({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-nunito",
-})
-
-const poppins = Poppins({
-  weight: ['300', '500', '900'],
-  variable: "--font-poppins",
-  subsets: ['latin']
-
-})
-
 export const metadata: Metadata = {
   title: "Greenew - Agencia de propaganda 360°",
   description: "A Greenew é uma agência de propaganda 360º capaz de atender diversas demandas de marketing. Conta com equipe criativa",
   icons: {
-    icon: "/icon.png",
+    icon: "/icon.jpg",
   },
   openGraph: {
     title: "Greenew",
@@ -62,8 +47,24 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${nunito.variable} ${poppins.variable}`}>
+    <html lang="pt-BR">
       <head>
+        {/* Os dois pesos são usados acima da dobra em todas as páginas, então
+            vale puxá-los junto com o HTML em vez de esperar o CSS resolver. */}
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fontes/ITCAvantGardeGothic-Medium.woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fontes/ITCAvantGardeGothic-Bold.woff2"
+          crossOrigin="anonymous"
+        />
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-195HBF0FR1"
@@ -79,12 +80,7 @@ export default function RootLayout({
             });
           `}
         </Script>
-        <style>{`
-          html {
-            --font-nunito: ${nunito.style.fontFamily};
-            --font-poppins: ${poppins.style.fontFamily};
-          }
-        `}</style>
+        <Script src="https://embeds.iubenda.com/widgets/f9149a16-77c3-48ff-bd44-ca9084a7dcdc.js" />
       </head>
       <body>
         <ContentHeader />
