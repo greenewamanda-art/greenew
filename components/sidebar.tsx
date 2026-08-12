@@ -60,7 +60,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             </li>
             <li>
               <Link
-                href="/responsabilidade-socioambiental"
+                href="/#responsabilidade-socioambiental"
                 onClick={onClose}
                 className={`text-2xl font-bold  font-avant transition-colors ${path === "/responsabilidade-socioambiental" ? "text-brand-green-deep" : "text-black hover:text-brand-green-deep"}`}
               >
