@@ -8,14 +8,17 @@ export default function Cursor() {
   const [hovering, setHovering] = useState(false);
 
   useEffect(() => {
-    const header = document.querySelector("header"); 
-    const sidebar = document.getElementById("sidebar")
+    const header = document.querySelector("header");
+    const sidebar = document.getElementById("sidebar");
     if (!header) return;
     if (!sidebar) return;
 
     const moveCursor = (e: MouseEvent) => {
       // ignora se o mouse está dentro do header
-      if (header.contains(e.target as Node) || sidebar.contains(e.target as Node)) {
+      if (
+        header.contains(e.target as Node) ||
+        sidebar.contains(e.target as Node)
+      ) {
         if (innerRef.current) innerRef.current.style.display = "none";
         if (outerRef.current) outerRef.current.style.display = "none";
         return;
@@ -36,7 +39,7 @@ export default function Cursor() {
     };
 
     const hoverElements = document.querySelectorAll(
-      "a, button, .cursor-pointer"
+      "a, button, .cursor-pointer",
     );
 
     const addHover = () => setHovering(true);
@@ -62,13 +65,13 @@ export default function Cursor() {
     <>
       <div
         ref={innerRef}
-        className={`fixed z-[9999] w-2 h-2 rounded-full bg-[#0a5f04] pointer-events-none transition-all duration-300 ease-out
+        className={`fixed z-[9999] w-2 h-2 rounded-full bg-brand-green-deep pointer-events-none transition-all duration-300 ease-out
         ${hovering ? "w-20 h-20 opacity-30" : ""}`}
         style={{ transform: "translate(-50%, -50%)" }}
       />
       <div
         ref={outerRef}
-        className={`fixed z-[9998] w-10 h-10 rounded-full border border-[#b19777] pointer-events-none transition-all duration-75
+        className={`fixed z-[9998] w-10 h-10 rounded-full border border-brand-tan pointer-events-none transition-all duration-75
         ${hovering ? "opacity-0" : "opacity-50"}`}
         style={{ transform: "translate(-50%, -50%)" }}
       />
