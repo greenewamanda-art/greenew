@@ -42,8 +42,12 @@ export default function PoliticaPrivacidade() {
       </section>
 
       {/* Content Section */}
+<<<<<<< HEAD
 
       <section className="bg-white py-8 sm:py-12 lg:py-16">
+=======
+     <section className="bg-white py-8 sm:py-12 lg:py-16">
+>>>>>>> 33edb05b10cb7cee8b00066c603903443d8078dc
         <div className="max-w-[1140px] mx-auto px-6">
           <div className="prose prose-sm sm:prose-base lg:prose-lg max-w-none">
             <h1 className="text-2xl sm:text-3xl font-semibold text-black mb-8">
