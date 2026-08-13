@@ -6,7 +6,7 @@ import type { Stat } from "../content";
 import { designVars } from "../styles";
 
 const preClass =
-  "mt-[20px] h-[18px] font-avant font-medium text-[13px] text-brand-olive lg:mt-[calc(39*var(--u))] lg:ml-[calc(var(--io)*var(--u))] lg:h-[calc(25*var(--u))] lg:text-[calc(20*var(--u))] lg:leading-[calc(24*var(--u))]";
+  "mt-[20px] h-[18px] tracking-[3.6px] font-avant font-medium text-[13px] text-brand-olive lg:mt-[calc(39*var(--u))] lg:ml-[calc(var(--io)*var(--u))] lg:h-[calc(25*var(--u))] lg:text-[calc(20*var(--u))] lg:leading-[calc(24*var(--u))]";
 
 export default function StatCard({ stat }: { stat: Stat }) {
   return (
@@ -40,7 +40,7 @@ export default function StatCard({ stat }: { stat: Stat }) {
         as="p"
         animation="fadeIn"
         by="line"
-        className="font-avant font-medium text-[44px] text-white lg:text-[calc(68*var(--u))] lg:leading-[calc(63*var(--u))]"
+        className={` ${stat.value === "200" ? 'mt-1' : ''} tracking-[3.4px] font-avant font-medium text-[44px] text-white lg:text-[calc(68*var(--u))] lg:leading-[calc(63*var(--u))]`}
       >
         {stat.value}
       </TextAnimate>
@@ -49,7 +49,7 @@ export default function StatCard({ stat }: { stat: Stat }) {
         as="p"
         animation="fadeIn"
         by="line"
-        className="mt-[8px] font-avant font-medium text-[13px] text-brand-olive lg:mt-[calc(11*var(--u))] lg:ml-[calc(var(--io)*var(--u))] lg:w-[calc(var(--lw)*var(--u))] lg:text-[calc(20*var(--u))] lg:leading-[calc(27*var(--u))]"
+        className="mt-[8px] tracking-[3.6px] font-avant font-medium text-[13px] text-brand-olive lg:mt-[calc(11*var(--u))] lg:ml-[calc(var(--io)*var(--u))] lg:w-[calc(var(--lw)*var(--u))] lg:text-[calc(20*var(--u))] lg:leading-[calc(27*var(--u))]"
       >
         {stat.label}
       </TextAnimate>

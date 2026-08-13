@@ -62,7 +62,7 @@ export default function Footer() {
           </Link>
 
           <p
-            className={`whitespace-pre-line text-brand-green-deep ${smallCopy} lg:absolute lg:left-[calc(109*var(--u))] lg:top-[calc(213*var(--u))] lg:w-[calc(1227*var(--u))]`}
+            className={`whitespace-pre-line tracking-[6px] text-brand-green-deep ${smallCopy} lg:absolute lg:left-[calc(109*var(--u))] lg:top-[calc(213*var(--u))] lg:w-[calc(1227*var(--u))]`}
           >
             {"AO UTILIZAR O NOSSO SITE, VOCÊ CONCORDA COM A "}
             <Link

@@ -20,7 +20,7 @@ function ContactHeading() {
         as="h2"
         animation="fadeIn"
         by="line"
-        className={`relative z-10 text-brand-green-deep ${sectionTitle} lg:absolute lg:left-[calc(99*var(--u))] lg:top-[calc(130*var(--u))]`}
+        className={`relative z-10 tracking-[10.8px] text-brand-green-deep ${sectionTitle} lg:absolute lg:left-[calc(99*var(--u))] lg:top-[calc(130*var(--u))]`}
       >
         ENTRE EM CONTATO
       </TextAnimate>
@@ -59,7 +59,7 @@ function ContactDetails() {
         as="p"
         animation="fadeIn"
         by="line"
-        className={`relative z-10 text-brand-green-deep ${smallCopy} lg:absolute lg:left-[calc(152*var(--u))] lg:top-[calc(276*var(--u))] lg:w-[calc(450*var(--u))]`}
+        className={`relative z-10 text-brand-green-deep tracking-[6px] ${smallCopy} lg:absolute lg:left-[calc(152*var(--u))] lg:top-[calc(276*var(--u))] lg:w-[calc(450*var(--u))]`}
       >
         {CONTACT_COPY}
       </TextAnimate>
@@ -70,7 +70,10 @@ function ContactDetails() {
             key={row.src}
             className="flex items-start gap-4 lg:gap-[calc(38*var(--u))]"
           >
-            <span className="flex w-[28px] shrink-0 justify-center lg:w-[calc(36*var(--u))]">
+            <Link
+              href={row.href}
+              className="flex w-[28px] shrink-0 justify-center lg:w-[calc(36*var(--u))]"
+            >
               <Image
                 src={row.src}
                 alt=""
@@ -83,13 +86,13 @@ function ContactDetails() {
                 })}
                 className="mt-1 w-full lg:mt-[calc(var(--t)*var(--u))] lg:w-[calc(var(--w)*var(--u))]"
               />
-            </span>
+            </Link>
             <Link href={row.href}>
               <TextAnimate
                 as="p"
                 animation="fadeIn"
                 by="line"
-                className={`text-brand-green-deep ${smallCopy}`}
+                className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}
               >
                 {row.text}
               </TextAnimate>

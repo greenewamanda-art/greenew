@@ -24,10 +24,10 @@ export default function PortfolioSection() {
       />
 
       <TextAnimate
-        as="h2"
+        as="p"
         animation="fadeIn"
         by="line"
-        className="relative z-10 text-center font-avant font-medium text-white text-[32px] sm:text-[48px] lg:absolute lg:inset-x-0 lg:top-[calc(180*var(--u))] lg:text-[calc(72*var(--u))] lg:leading-[calc(116*var(--u))]"
+        className="relative z-10 tracking-[21.6px] text-center font-avant text-white text-[32px] sm:text-[48px] lg:absolute lg:inset-x-0 lg:top-[calc(180*var(--u))] lg:text-[calc(72*var(--u))] lg:leading-[calc(116*var(--u))]"
       >
         PORTFÓLIO
       </TextAnimate>
@@ -40,7 +40,7 @@ export default function PortfolioSection() {
               animation="fadeIn"
               by="line"
               segmentClassName={cardLineClass}
-              className={cardLabelClass}
+              className={`${cardLabelClass} tracking-[11.4px]`}
             >
               {item.label}
             </TextAnimate>

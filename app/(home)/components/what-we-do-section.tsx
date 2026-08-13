@@ -64,7 +64,7 @@ function Certificates() {
         as="p"
         animation="fadeIn"
         by="line"
-        className={`text-brand-green-deep ${bodyCopy} lg:absolute lg:left-[calc(1002*var(--u))] lg:top-[calc(949*var(--u))] lg:w-[calc(237*var(--u))]`}
+        className={`text-brand-green-deep tracking-[6.6px] ${bodyCopy} lg:absolute lg:left-[calc(1002*var(--u))] lg:top-[calc(949*var(--u))] lg:w-[calc(237*var(--u))]`}
       >
         CERTIFICADOS
       </TextAnimate>
@@ -103,7 +103,7 @@ export default function WhatWeDoSection() {
         as="h2"
         animation="fadeIn"
         by="line"
-        className={`text-brand-olive ${sectionTitle} lg:absolute lg:left-[calc(100*var(--u))] lg:top-[calc(137*var(--u))]`}
+        className={`text-brand-olive ${sectionTitle} lg:absolute lg:left-[calc(100*var(--u))] lg:top-[calc(137*var(--u))] tracking-[10.8px]`}
       >
         O QUE FAZEMOS
       </TextAnimate>

@@ -31,7 +31,7 @@ export default function SocioEnvironmentalSection() {
         as="h2"
         animation="fadeIn"
         by="line"
-        className={`text-white ${sectionTitle} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(240*var(--u))]`}
+        className={`text-white tracking-[10.8px] ${sectionTitle} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(240*var(--u))]`}
       >
         SOCIOAMBIENTAL
       </TextAnimate>
@@ -40,7 +40,7 @@ export default function SocioEnvironmentalSection() {
         as="p"
         animation="fadeIn"
         by="line"
-        className={`text-brand-green-deep ${bodyCopy} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(333*var(--u))] lg:w-[calc(768*var(--u))]`}
+        className={`text-brand-green-deep tracking-[6.6px] ${bodyCopy} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(333*var(--u))] lg:w-[calc(768*var(--u))]`}
       >
         {SOCIO_COPY}
       </TextAnimate>

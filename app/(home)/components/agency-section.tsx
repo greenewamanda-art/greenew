@@ -22,7 +22,7 @@ export default function AgencySection() {
         as="h2"
         animation="fadeIn"
         by="line"
-        className={`relative z-10 text-brand-olive ${sectionTitle} lg:absolute lg:left-[calc(203*var(--u))] lg:top-[calc(147*var(--u))]`}
+        className={`relative z-10 text-brand-olive tracking-[10.8px] ${sectionTitle} lg:absolute lg:left-[calc(203*var(--u))] lg:top-[calc(147*var(--u))]`}
       >
         AGÊNCIA
       </TextAnimate>
@@ -31,7 +31,7 @@ export default function AgencySection() {
         as="p"
         animation="fadeIn"
         by="line"
-        className={`relative z-10 text-brand-green-deep ${bodyCopy} lg:absolute lg:left-[calc(607*var(--u))] lg:top-[calc(145*var(--u))] lg:w-[calc(866*var(--u))]`}
+        className={`relative z-10 tracking-[6.6px] text-brand-green-deep ${bodyCopy} lg:absolute lg:left-[calc(607*var(--u))] lg:top-[calc(145*var(--u))] lg:w-[calc(866*var(--u))]`}
       >
         {AGENCY_COPY}
       </TextAnimate>
