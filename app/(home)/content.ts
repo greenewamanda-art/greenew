@@ -81,24 +81,35 @@ export type Certificate = {
   design: { left: number; width: number };
 };
 
-export const certificates: Certificate[] = [
-  {
-    src: "/home/cert-1.png",
-    intrinsic: { width: 645, height: 381 },
-    design: { left: 1291, width: 171 },
-  },
-  {
-    src: "/home/cert-2.png",
-    intrinsic: { width: 413, height: 381 },
-    design: { left: 1514, width: 109 },
-  },
-  {
-    src: "/home/cert-3.png",
-    intrinsic: { width: 501, height: 381 },
-    design: { left: 1675, width: 132 },
-  },
+type CertificateInput = {
+  src: string;
+  intrinsic: { width: number; height: number };
+};
+
+const CERT_HEIGHT = 101; // altura fixa no grid de design (--u)
+const CERT_GAP = 52;     // espaçamento horizontal entre certificados
+const CERT_START_LEFT = 1291; // left do primeiro certificado
+
+const certificatesInput: CertificateInput[] = [
+  { src: "/home/cert-4.png", intrinsic: { width: 659, height: 381 } },
+  { src: "/home/cert-1.png", intrinsic: { width: 645, height: 381 } },
+  { src: "/home/cert-2.png", intrinsic: { width: 413, height: 381 } },
+  { src: "/home/cert-3.png", intrinsic: { width: 501, height: 381 } },
 ];
 
+export const certificates: Certificate[] = certificatesInput.reduce<Certificate[]>(
+  (acc, cert, index) => {
+    const width = Math.floor(
+      (cert.intrinsic.width / cert.intrinsic.height) * CERT_HEIGHT,
+    );
+    const prev = acc[index - 1];
+    const left = prev ? prev.design.left + prev.design.width + CERT_GAP : CERT_START_LEFT;
+
+    acc.push({ ...cert, design: { left, width } });
+    return acc;
+  },
+  [],
+);
 export const clientLogoIds = Array.from({ length: 29 }, (_, i) => i + 16);
 
 export const portfolioItems = [
@@ -135,8 +146,7 @@ export const contactRows: ContactRow[] = [
     intrinsic: { width: 28, height: 39 },
     design: { width: 28.15, top: 8 },
     text: [
-      "ENDEREÇO: RUA JERICÓ, 193 – CJ. 32",
-      "VILA MADALENA SÃO PAULO/SP – BRASIL",
+      "ENDEREÇO: RUA JERICÓ, 193 – CJ. 32 - VILA MADALENA SÃO PAULO/SP – BRASIL",
     ].join(LINE_BREAK),
     href: "https://www.google.com/maps?cid=8509020019810472022&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=pt&source=embed"
   },

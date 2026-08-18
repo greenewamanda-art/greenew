@@ -25,6 +25,11 @@ const navItems = [
 
 const socialLinks = [
   {
+    label: "Whatsapp",
+    href: "https://api.whatsapp.com/send?phone=5511985644535&text=Oi!%20Por%20favor,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os.",
+    icon: "whats",
+  },
+  {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/greenew-group-publicidade/people/?viewAsMember=true",
     icon: "linkedin",

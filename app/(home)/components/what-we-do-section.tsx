@@ -39,20 +39,25 @@ function YearsBadge() {
 function VeevaBadge() {
   return (
     <div className="flex flex-col items-start lg:absolute lg:left-[calc(103*var(--u))] lg:top-[calc(1052*var(--u))]">
-      <Image
-        src="/home/stats-badge-2.svg"
-        alt="Veeva"
-        width={142}
-        height={33}
-        className="w-[142px] lg:w-[calc(142.11*var(--u))]"
-      />
-      <Image
-        src="/home/stats-badge-1.svg"
-        alt="Somos especialistas em soluções Veeva."
-        width={217}
-        height={35}
-        className="mt-[26px] w-[217px] lg:mt-[calc(25.7*var(--u))] lg:w-[calc(217.09*var(--u))]"
-      />
+      <div className="flex flex-row lg:gap-6">
+        <Image
+          src="/home/stats-badge-2.svg"
+          alt="Veeva"
+          width={142}
+          height={33}
+          className=":w-[150px] lg:w-[calc(160.11*var(--u))]"
+        />
+        <Image
+          src="/home/e-wizard.svg"
+          alt="Somos especialistas em soluções Veeva."
+          width={217}
+          height={35}
+          className="w-[150px] lg:w-[calc(238*var(--u))]"
+        />
+      </div>
+      <p className="ml-6 tracking-[4.2px] font-avant font-medium text-[14px] lg:leading-[calc(58*var(--u))] lg:w-[calc(768*var(--u))]">
+        SOMOS ESPECIALISTAS EM SOLUÇÕES VEEVA E EWIZARD.
+      </p>
     </div>
   );
 }
@@ -68,8 +73,7 @@ function Certificates() {
       >
         CERTIFICADOS
       </TextAnimate>
-
-      <div className="flex items-center gap-6 lg:contents">
+      <div className="flex flex-wrap md:flex-nowrap items-center gap-6 lg:absolute lg:top-[calc(928*var(--u))] lg:left-[calc(1291*var(--u))] lg:h-[calc(101*var(--u))] lg:w-[calc(RIGHT_EDGE*var(--u)-1291*var(--u))] lg:justify-between lg:gap-0 ">
         {certificates.map((cert) => (
           <Image
             key={cert.src}
@@ -77,21 +81,19 @@ function Certificates() {
             alt="Certificado"
             width={cert.intrinsic.width}
             height={cert.intrinsic.height}
-            style={designVars({
-              "--l": cert.design.left,
-              "--w": cert.design.width,
-            })}
-            className="h-[64px] w-auto object-contain lg:absolute lg:top-[calc(928*var(--u))] lg:left-[calc(var(--l)*var(--u))] lg:h-[calc(101*var(--u))] lg:w-[calc(var(--w)*var(--u))]"
+            className="h-[64px] w-auto object-contain lg:h-full lg:w-auto shrink-0"
           />
         ))}
       </div>
     </div>
   );
 }
-
 export default function WhatWeDoSection() {
   return (
-    <section id="oquefazemos" className="relative flex flex-col gap-10 bg-white px-6 py-14 sm:px-10 lg:block lg:h-[calc(1200*var(--u))] lg:px-0 lg:py-0">
+    <section
+      id="oquefazemos"
+      className="relative flex flex-col gap-10 bg-white px-6 py-14 sm:px-10 lg:block lg:h-[calc(1200*var(--u))] lg:px-0 lg:py-0"
+    >
       <DecorImage
         src="/home/leaf-outline.svg"
         width={362}

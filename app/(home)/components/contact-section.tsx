@@ -92,7 +92,7 @@ function ContactDetails() {
                 as="p"
                 animation="fadeIn"
                 by="line"
-                className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}
+                className={`text-brand-green-deep ${smallCopy} tracking-[6px] leaf-agencia.png`}
               >
                 {row.text}
               </TextAnimate>
