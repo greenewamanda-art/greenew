@@ -60,7 +60,7 @@ export default function HeroSection() {
         />
 
         <div className="relative flex h-full w-full items-center px-6 py-14 md:px-0 md:py-0">
-          <h1 className="whitespace-pre-wrap space-y-2 [text-shadow:7px_7px_5px_rgba(7,79,8,0.20)] text-white font-medium text-[22px] leading-snug tracking-[10.9px]  md:tracking-[20.9px] sm:text-[28px] lg:text-6xl lg:absolute lg:left-[calc(100*var(--u))]">
+          <h1 className="whitespace-pre-wrap space-y-2 [text-shadow:7px_7px_5px_rgba(7,79,8,0.20)] text-white font-medium text-[22px] leading-snug tracking-[10.9px]  md:tracking-[20.9px] sm:text-[28px] lg:text-[68px] lg:absolute lg:left-[calc(100*var(--u))]">
             <TextAnimate
               className="block"
               animation="slideLeft"
