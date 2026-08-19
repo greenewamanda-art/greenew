@@ -16,7 +16,7 @@ export default function SocioEnvironmentalSection() {
         src="/home/leaf-socio.png"
         width={355}
         height={355}
-        className="z-20 hidden lg:block lg:left-[calc(690*var(--u))] lg:top-[calc(-150*var(--u))] lg:size-[calc(355*var(--u))]"
+        className="z-20 hidden lg:block lg:left-[calc(890*var(--u))] 2xl:left-[calc(690*var(--u))] lg:top-[calc(-150*var(--u))] lg:size-[calc(355*var(--u))]"
       />
 
       <Image

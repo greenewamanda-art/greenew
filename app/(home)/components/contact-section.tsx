@@ -46,61 +46,61 @@ function ContactMap() {
 function ContactDetails() {
   return (
     <div className="relative bg-brand-cream px-6 py-12 sm:px-10 lg:h-[calc(734*var(--u))] lg:px-0 lg:py-0">
-      <div className="absolute inset-0 hidden bg-white lg:block lg:h-[calc(734*var(--u))] lg:w-[calc(1550*var(--u))]" />
-
-      <DecorImage
-        src="/home/contato-decor-1.png"
-        width={1569}
-        height={2726}
-        className="right-0 hidden object-cover lg:block lg:top-[calc(70*var(--u))] lg:h-[calc(644*var(--u))] lg:w-[calc(371*var(--u))]"
-      />
-
-      <TextAnimate
-        as="p"
-        animation="fadeIn"
-        by="line"
-        className={`relative z-10 text-brand-green-deep tracking-[6px] ${smallCopy} lg:absolute lg:left-[calc(152*var(--u))] lg:top-[calc(276*var(--u))] lg:w-[calc(450*var(--u))]`}
-      >
-        {CONTACT_COPY}
-      </TextAnimate>
-
-      <div className="relative z-10 mt-8 space-y-6 lg:absolute lg:left-[calc(780*var(--u))] lg:top-[calc(285*var(--u))] lg:mt-0 lg:w-[calc(675*var(--u))] lg:space-y-[calc(50*var(--u))]">
-        {contactRows.map((row) => (
-          <div
-            key={row.src}
-            className="flex items-start gap-4 lg:gap-[calc(38*var(--u))]"
+    <div className="absolute inset-0 hidden bg-white lg:block lg:h-[calc(734*var(--u))] lg:w-[calc(1550*var(--u))]" />
+  
+    <DecorImage
+      src="/home/contato-decor-1.png"
+      width={1569}
+      height={2726}
+      className="right-0 hidden object-cover lg:block lg:top-[calc(70*var(--u))] lg:h-[calc(644*var(--u))] lg:w-[calc(371*var(--u))]"
+    />
+  
+    <TextAnimate
+      as="p"
+      animation="fadeIn"
+      by="line"
+      className={`relative z-10 text-brand-green-deep tracking-[6px] ${smallCopy} lg:absolute lg:left-[calc(152*var(--u))] lg:top-1/2 lg:w-[calc(450*var(--u))] lg:-translate-y-1/2`}
+    >
+      {CONTACT_COPY}
+    </TextAnimate>
+  
+    <div className="relative z-10 mt-8 space-y-6 lg:absolute lg:left-[calc(780*var(--u))] lg:top-1/2 lg:mt-0 lg:w-[calc(675*var(--u))] lg:-translate-y-1/2 lg:space-y-[calc(50*var(--u))]">
+      {contactRows.map((row) => (
+        <div
+          key={row.src}
+          className="flex items-start gap-4 lg:gap-[calc(38*var(--u))]"
+        >
+          <Link
+            href={row.href}
+            className="flex w-[28px] shrink-0 justify-center lg:w-[calc(36*var(--u))]"
           >
-            <Link
-              href={row.href}
-              className="flex w-[28px] shrink-0 justify-center lg:w-[calc(36*var(--u))]"
+            <Image
+              src={row.src}
+              alt=""
+              aria-hidden
+              width={row.intrinsic.width}
+              height={row.intrinsic.height}
+              style={designVars({
+                "--w": row.design.width,
+                "--t": row.design.top,
+              })}
+              className="mt-1 w-full lg:mt-[calc(var(--t)*var(--u))] lg:w-[calc(var(--w)*var(--u))]"
+            />
+          </Link>
+          <Link href={row.href}>
+            <TextAnimate
+              as="p"
+              animation="fadeIn"
+              by="line"
+              className={`text-brand-green-deep ${smallCopy} tracking-[6px] leaf-agencia.png`}
             >
-              <Image
-                src={row.src}
-                alt=""
-                aria-hidden
-                width={row.intrinsic.width}
-                height={row.intrinsic.height}
-                style={designVars({
-                  "--w": row.design.width,
-                  "--t": row.design.top,
-                })}
-                className="mt-1 w-full lg:mt-[calc(var(--t)*var(--u))] lg:w-[calc(var(--w)*var(--u))]"
-              />
-            </Link>
-            <Link href={row.href}>
-              <TextAnimate
-                as="p"
-                animation="fadeIn"
-                by="line"
-                className={`text-brand-green-deep ${smallCopy} tracking-[6px] leaf-agencia.png`}
-              >
-                {row.text}
-              </TextAnimate>
-            </Link>
-          </div>
-        ))}
-      </div>
+              {row.text}
+            </TextAnimate>
+          </Link>
+        </div>
+      ))}
     </div>
+  </div>
   );
 }
 

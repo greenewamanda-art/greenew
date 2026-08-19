@@ -10,16 +10,21 @@ const vars = (values: Record<string, number>) =>
 
 const socialLinks = [
   {
+    label: "Whatsapp",
+    href: "https://api.whatsapp.com/send?phone=5511985644535&text=Oi!%20Por%20favor,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os.",
+    icon: "icon-whats-header",
+  },
+  {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/greenew-group-publicidade/people/?viewAsMember=true",
-    icon: "linkedin",
+    icon: "icon-linkedin-header",
   },
   {
     label: "Instagram",
     href: "https://www.instagram.com/greenew_group/",
-    icon: "instagram",
+    icon: "icon-instagram-header",
   },
-  { label: "YouTube", href: "#", icon: "youtube" },
+  { label: "YouTube", href: "#", icon: "icon-youtube-header" },
 ];
 
 const smallCopy =
@@ -86,7 +91,7 @@ export default function Footer() {
                 className="block size-[40px] overflow-clip transition-opacity hover:opacity-70 lg:absolute lg:top-[calc(220*var(--u))] lg:left-[calc(var(--l)*var(--u))] lg:size-[calc(54.648*var(--u))]"
               >
                 <img
-                  src={`/home/icon-${social.icon}.svg`}
+                  src={`/home/${social.icon}.svg`}
                   alt=""
                   className="size-full"
                 />

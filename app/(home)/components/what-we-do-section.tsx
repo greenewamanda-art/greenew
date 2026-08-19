@@ -55,7 +55,7 @@ function VeevaBadge() {
           className="w-[150px] lg:w-[calc(238*var(--u))]"
         />
       </div>
-      <p className="ml-6 tracking-[4.2px] font-avant font-medium text-[14px] lg:leading-[calc(58*var(--u))] lg:w-[calc(768*var(--u))]">
+      <p className="ml-6 tracking-[4.2px] font-avant font-medium text-[12px] lg:leading-[calc(58*var(--u))] w-full">
         SOMOS ESPECIALISTAS EM SOLUÇÕES VEEVA E EWIZARD.
       </p>
     </div>

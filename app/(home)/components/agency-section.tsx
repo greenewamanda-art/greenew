@@ -8,7 +8,7 @@ import DecorImage from "./decor-image";
 
 export default function AgencySection() {
   return (
-    <section id="agencia" className="relative flex flex-col gap-8 overflow-hidden bg-brand-cream px-6 py-14 sm:px-10 lg:block lg:h-[calc(800*var(--u))] lg:px-0 lg:py-0">
+    <section id="agencia" className="relative flex flex-col gap-8 overflow-hidden bg-brand-cream px-6 py-14 sm:px-10 lg:block lg:h-[calc(940*var(--u))] lg:px-0 lg:py-0">
       <div className="absolute hidden bg-white lg:block lg:left-0 lg:top-0 lg:h-[calc(350*var(--u))] lg:w-[calc(506*var(--u))]" />
 
       <DecorImage
