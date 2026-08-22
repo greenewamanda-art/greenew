@@ -114,10 +114,10 @@ export const clientLogoIds = Array.from({ length: 29 }, (_, i) => i + 16);
 
 export const portfolioItems = [
   { lines: ["CASES DE", "SUCESSO"], href: "/portfolio/cases-sucesso.pdf" },
-  { lines: ["EVENTOS & STANDS"], href: "/portfolio/stands.pdf" },
+  { lines: ["EVENTOS", "& STANDS"], href: "/portfolio/stands.pdf" },
   { lines: ["VÍDEOS"], href: "/portfolio/videos" },
   { lines: ["REDES", "SOCIAIS"], href: "/portfolio/redes-sociais" },
-  { lines: ["SITES &", "VA's"], href: "/portfolio/sites-vas" },
+  { lines: ["SITES", "& VA's"], href: "/portfolio/sites-vas" },
   { lines: ["AÇÕES", "AWARENESS"], href: "/portfolio/awareness.pdf" },
 ].map(({ lines, href }) => ({
   id: lines.join("-"),

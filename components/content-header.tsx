@@ -81,7 +81,7 @@ function DesktopHeader({ scrolled }: { scrolled: boolean }) {
           target="_blank"
           rel="noreferrer"
           style={vars({ "--l": 1398 + i * 69.4 })}
-          className="absolute top-[calc(41*var(--u))] left-[calc(var(--l)*var(--u))] block size-[calc(47.574*var(--u))] overflow-clip transition-opacity hover:opacity-70"
+          className="absolute top-[calc(74*var(--u))] left-[calc(var(--l)*var(--u))] -translate-y-1/2 block size-[calc(47.574*var(--u))] overflow-clip transition-opacity hover:opacity-70"
         >
           <img
             src={`/home/icon-${social.icon}-header.svg`}
@@ -94,12 +94,12 @@ function DesktopHeader({ scrolled }: { scrolled: boolean }) {
       <img
         src="/home/cert-3.png"
         alt="Certificado Women Owned"
-        className="absolute left-[calc(1656*var(--u))] top-[calc(21*var(--u))] h-[calc(88.413*var(--u))] w-[calc(116.259*var(--u))] object-contain"
+        className="absolute left-[calc(1656*var(--u))] top-[calc(74*var(--u))] -translate-y-1/2 h-[calc(88.413*var(--u))] w-[calc(116.259*var(--u))] object-contain"
       />
       <img
         src="/home/cert-2.png"
         alt="Certificado EcoVadis"
-        className="absolute left-[calc(1791.68*var(--u))] top-[calc(21.2*var(--u))] h-[calc(88.488*var(--u))] w-[calc(95.92*var(--u))] object-contain"
+        className="absolute left-[calc(1791.68*var(--u))] top-[calc(74*var(--u))] -translate-y-1/2 h-[calc(88.488*var(--u))] w-[calc(95.92*var(--u))] object-contain"
       />
     </header>
   );
@@ -121,11 +121,6 @@ export default function ContentHeader() {
       <div className="lg:hidden">
         <Header onMenuClick={() => setMenuOpen(true)} />
         <Sidebar isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-        {/*
-          O header é `fixed`, então não empurra nada. Este espaçador reserva
-          exatamente a altura dele — é o único offset de topo no mobile, e por
-          isso o respiro visual de cada página fica no `pt` da própria seção.
-        */}
         <div aria-hidden className={MOBILE_HEADER_HEIGHT} />
       </div>
 

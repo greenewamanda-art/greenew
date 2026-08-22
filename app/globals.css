@@ -26,6 +26,19 @@
     url("/fontes/ITCAvantGardeGothic-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "ITC Avant Garde Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("/fontes/ITCAvantGardeGothicPro-Book.woff2") format("woff2"),
+    url("/fontes/ITCAvantGardeGothicPro-Book.woff") format("woff"),
+    url("/fontes/ITCAvantGardeGothicPro-Book.ttf") format("truetype");
+}
+
+
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

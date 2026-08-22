@@ -15,7 +15,7 @@ export default function AgencySection() {
         src="/home/leaf-agencia.png"
         width={1938}
         height={1314}
-        className="right-0 top-6 w-[150px] sm:w-[220px] lg:right-[calc(-169*var(--u))] lg:top-[calc(76*var(--u))] lg:h-[calc(315*var(--u))] lg:w-[calc(465*var(--u))]"
+        className="right-0 top-6 w-[150px] sm:w-[220px] lg:right-[calc(-169*var(--u))] hidden lg:block lg:top-[calc(76*var(--u))] lg:h-[calc(315*var(--u))] lg:w-[calc(465*var(--u))]"
       />
 
       <TextAnimate

@@ -9,7 +9,7 @@ const cardClass =
   "flex h-[110px] items-center justify-center border-[3px] border-white px-4 text-center transition-colors hover:bg-white/10 lg:h-[calc(150*var(--u))]";
 
 const cardLabelClass =
-  "font-avant font-medium text-white text-[22px] sm:text-[22px] lg:text-[calc(34*var(--u))] lg:leading-[calc(46*var(--u))]";
+  "font-avant font-medium text-white text-[22px] sm:text-[22px] lg:text-[calc(25*var(--u))] lg:leading-[calc(46*var(--u))]";
 
 const cardLineClass = "inline lg:block lg:whitespace-normal";
 
