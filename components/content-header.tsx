@@ -94,7 +94,7 @@ function DesktopHeader({ scrolled }: { scrolled: boolean }) {
       <img
         src="/home/cert-3.png"
         alt="Certificado Women Owned"
-        className="absolute left-[calc(1656*var(--u))] top-[calc(74*var(--u))] -translate-y-1/2 h-[calc(88.413*var(--u))] w-[calc(116.259*var(--u))] object-contain"
+        className="absolute left-[calc(1670*var(--u))] top-[calc(74*var(--u))] -translate-y-1/2 h-[calc(88.413*var(--u))] w-[calc(116.259*var(--u))] object-contain"
       />
       <img
         src="/home/cert-2.png"

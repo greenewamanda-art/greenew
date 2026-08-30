@@ -20,7 +20,7 @@ function ContactHeading() {
         as="h2"
         animation="fadeIn"
         by="line"
-        className={`relative z-10 tracking-[10.8px] text-brand-green-deep ${sectionTitle} lg:absolute lg:left-[calc(99*var(--u))] lg:top-[calc(130*var(--u))]`}
+        className={`max-w-[90%] lg:max-w-full relative z-10 tracking-[10.8px] text-brand-green-deep ${sectionTitle} lg:absolute lg:left-[calc(99*var(--u))] lg:top-[calc(130*var(--u))]`}
       >
         ENTRE EM CONTATO
       </TextAnimate>
