@@ -41,7 +41,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </button>
 
         <nav className="pt-16 px-8">
-          <div className="mb-10 flex justify-between items-center">
+          <div className="mb-5 flex justify-between items-center">
             <Image
               src="/home/logo-sidebar.png"
               alt="Greenew"
@@ -83,7 +83,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </a>
             </div>
           </div>
-          <ul className="space-y-6">
+          <ul className="space-y-4">
             <li>
               <Link
                 href="/"
@@ -139,7 +139,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </Link>
             </li>
             <li>
-              <div className="border-b mt-14 border-white"></div>
+              <div className="border-b mt-10 border-white"></div>
             </li>
           </ul>
         </nav>
@@ -194,7 +194,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </svg>{" "}
                   E-mail:
                 </div>
-                <span className="font-normal tracking-[6.5px]">
+                <span className="font-normal tracking-[1.5px]">
                   atendimento@greenewgroup.com
                 </span>
               </Link>
@@ -204,7 +204,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           <Button variant="link" asChild onClick={onClose} className="mt-5">
             <Link
               href="/politica-de-privacidade"
-              className="block font-normal tracking-[4.6px] text-white"
+              className="block font-normal tracking-[2.6px] text-white"
             >
               Política de privacidade
             </Link>
