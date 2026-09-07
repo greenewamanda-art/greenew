@@ -34,13 +34,13 @@ export default function Header({ onMenuClick }: HeaderProps) {
           </Link>
         </div>
         <div className="flex items-center gap-2">
-          <a href="">
+          <a href="https://api.whatsapp.com/send?phone=5511985644535&text=Oi!%20Por%20favor,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os.">
             <Image src="/home/icon-whats-header.svg" alt="Whatsapp" width={32} height={32} />
           </a>
-          <a href="">
-            <Image src="/home/icon-linkedin-header.svg" alt="Instagram" width={32} height={32} />
+          <a href="https://www.linkedin.com/company/greenew-group-publicidade/people/?viewAsMember=true">
+            <Image src="/home/icon-linkedin-header.svg" alt="Linkedim" width={32} height={32} />
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/greenew_group/">
             <Image src="/home/icon-instagram-header.svg" alt="Youtube" width={32} height={32} />
           </a>
         <Button

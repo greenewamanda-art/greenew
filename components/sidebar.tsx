@@ -45,7 +45,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <Image
               src="/home/logo-sidebar.png"
               alt="Greenew"
-              width={150}
+              width={120}
               height={100}
             />
             <div className="flex items-center gap-3">
@@ -57,7 +57,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   height={30}
                 />
               </a>
-              <a href="https://www.instagram.com/greenewgroup/">
+              <a href="https://www.linkedin.com/company/greenew-group-publicidade/people/?viewAsMember=true">
                 <Image
                   src="/home/link-sidebar.png"
                   alt="Linkedin"
@@ -65,7 +65,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   height={30}
                 />
               </a>
-              <a href="https://www.youtube.com/@greenewgroup">
+              <a href="https://www.instagram.com/greenew_group/">
                 <Image
                   src="/home/insta-sidebar.png"
                   alt="Instagram"
@@ -73,7 +73,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   height={30}
                 />
               </a>
-              <a href="https://www.linkedin.com/company/greenewgroup/">
+              <a href="https://www.youtube.com/@greenew-agenciadepublicida2288">
                 <Image
                   src="/home/you-sidebar.png"
                   alt="Youtube"
