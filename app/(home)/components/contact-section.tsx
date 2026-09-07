@@ -71,8 +71,8 @@ function ContactDetails() {
     <div>
       <div className="flex flex-col gap-2 lg:hidden">
         <div className="flex items-center gap-4">
-          <Link href="" className="flex w-[28px] shrink-0 justify-center">
-            <Image src="/home/icon-whatsapp.svg" alt="" aria-hidden width={29} height={29} className="w-full" />
+          <Link href="" className="flex w-[20px] shrink-0 justify-center">
+            <Image src="/home/icon-whatsapp.svg" alt="" aria-hidden width={20} height={20} className="w-full" />
           </Link>
           <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
             WHATSAPP:
@@ -117,7 +117,7 @@ function ContactDetails() {
     <div>
       <div className="flex flex-col gap-2 lg:hidden">
         <div className="flex items-center gap-4">
-          <Link href="" className="flex w-[28px] shrink-0 justify-center">
+          <Link href="" className="flex w-[20px] shrink-0 justify-center">
             <Image src="/home/icon-address.svg" alt="" aria-hidden width={29} height={39} className="w-full" />
           </Link>
           <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
@@ -132,7 +132,7 @@ function ContactDetails() {
       </div>
 
       <div className="hidden items-start gap-4 lg:flex lg:gap-[calc(38*var(--u))]">
-        <Link className="flex w-[28px] shrink-0 justify-center lg:w-[calc(36*var(--u))]" href={""}>
+        <Link className="flex w-[20px] shrink-0 justify-center lg:w-[calc(36*var(--u))]" href={""}>
           <Image
             src="/home/icon-address.svg"
             alt=""
