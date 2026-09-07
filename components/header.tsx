@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 
 /**
@@ -32,6 +33,16 @@ export default function Header({ onMenuClick }: HeaderProps) {
             />
           </Link>
         </div>
+        <div className="flex items-center gap-2">
+          <a href="">
+            <Image src="/home/icon-whats-header.svg" alt="Whatsapp" width={32} height={32} />
+          </a>
+          <a href="">
+            <Image src="/home/icon-linkedin-header.svg" alt="Instagram" width={32} height={32} />
+          </a>
+          <a href="">
+            <Image src="/home/icon-instagram-header.svg" alt="Youtube" width={32} height={32} />
+          </a>
         <Button
           variant="ghost"
           className="w-fit shrink-0 justify-end text-brand-green-deep flex items-center gap-2 sm:gap-2 hover:bg-transparent cursor-pointer"
@@ -49,6 +60,7 @@ export default function Header({ onMenuClick }: HeaderProps) {
           </svg>
           <span className="text-sm sm:text-base">Menu</span>
         </Button>
+        </div>
       </div>
     </header>
   );

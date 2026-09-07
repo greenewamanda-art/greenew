@@ -57,7 +57,7 @@ export default function Footer() {
   return (
     <>
       <div className="design-canvas w-full">
-        <footer className="relative flex flex-col gap-8 bg-brand-cream px-6 py-12 sm:px-10 lg:block lg:h-[calc(470*var(--u))] lg:px-0 lg:py-0">
+        <footer className="relative flex flex-col gap-8 bg-brand-cream px-6 py-12 sm:px-10 lg:block lg:h-[calc(470*var(--u))] lg:px-0 lg:py-0 items-center">
           <Link href="/" className="block w-fit">
             <img
               src="/home/logo-footer.svg"
@@ -67,7 +67,7 @@ export default function Footer() {
           </Link>
 
           <p
-            className={`whitespace-pre-line tracking-[6px] text-brand-green-deep ${smallCopy} lg:absolute lg:left-[calc(109*var(--u))] lg:top-[calc(213*var(--u))] lg:w-[calc(1227*var(--u))]`}
+            className={`whitespace-pre-line text-center lg:text-left tracking-[6px] text-brand-green-deep ${smallCopy} lg:absolute lg:left-[calc(109*var(--u))] lg:top-[calc(213*var(--u))] lg:w-[calc(1227*var(--u))]`}
           >
             {"AO UTILIZAR O NOSSO SITE, VOCÊ CONCORDA COM A "}
             <Link

@@ -39,24 +39,25 @@ function YearsBadge() {
 function VeevaBadge() {
   return (
     <div className="flex flex-col items-start lg:absolute lg:left-[calc(103*var(--u))] lg:top-[calc(1052*var(--u))]">
-      <div className="flex flex-row lg:gap-2">
+      <div className="flex flex-row lg:gap-2 w-full justify-between">
         <Image
           src="/home/stats-badge-2.svg"
           alt="Veeva"
           width={142}
           height={33}
-          className=":w-[150px] lg:w-[calc(160.11*var(--u))]"
+          className="w-[180px] lg:w-[calc(160.11*var(--u))]"
         />
         <Image
           src="/home/e-wizard.svg"
           alt="Somos especialistas em soluções Veeva."
           width={217}
           height={35}
-          className="w-[150px] lg:w-[calc(238*var(--u))]"
+          className="w-[180px] lg:w-[calc(238*var(--u))]"
         />
       </div>
-      <p className="ml-6 tracking-[4.2px] font-avant font-medium text-[12px] w-full">
-        SOMOS ESPECIALISTAS EM SOLUÇÕES<br className="hidden lg:block"></br> VEEVA E EWIZARD.
+      <p className="lg:ml-6 text-center lg:text-left tracking-[4.2px] font-avant font-medium text-[10px] lg:text-[12px] w-full">
+        SOMOS ESPECIALISTAS EM SOLUÇÕES<br className="hidden lg:block"></br>{" "}
+        VEEVA E EWIZARD.
       </p>
     </div>
   );
@@ -64,7 +65,7 @@ function VeevaBadge() {
 
 function Certificates() {
   return (
-    <div className="flex flex-wrap items-center gap-x-8 gap-y-6 lg:block">
+    <div className="flex justify-center flex-wrap items-center gap-x-8 gap-y-6 lg:block">
       <TextAnimate
         as="p"
         animation="fadeIn"
@@ -73,7 +74,8 @@ function Certificates() {
       >
         CERTIFICADOS
       </TextAnimate>
-      <div className="flex flex-wrap md:flex-nowrap items-center gap-6 lg:absolute lg:top-[calc(928*var(--u))] lg:left-[calc(1220*var(--u))] lg:h-[calc(101*var(--u))] lg:w-[calc(RIGHT_EDGE*var(--u)-1291*var(--u))] lg:justify-between lg:gap-4">
+
+      <div className="grid grid-cols-2 items-center gap-6 md:flex md:flex-wrap lg:flex-nowrap lg:absolute lg:top-[calc(928*var(--u))] lg:left-[calc(1220*var(--u))] lg:h-[calc(101*var(--u))] lg:w-[calc(RIGHT_EDGE*var(--u)-1291*var(--u))] lg:justify-between lg:gap-4">
         {certificates.map((cert) => (
           <Image
             key={cert.src}
@@ -81,7 +83,7 @@ function Certificates() {
             alt="Certificado"
             width={cert.intrinsic.width}
             height={cert.intrinsic.height}
-            className="h-[64px] w-auto object-contain lg:h-full lg:w-auto shrink-0"
+            className="h-full w-auto object-contain lg:h-full lg:w-auto shrink-0"
           />
         ))}
       </div>
