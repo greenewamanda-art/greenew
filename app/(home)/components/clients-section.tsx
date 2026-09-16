@@ -24,7 +24,7 @@ export default function ClientsSection() {
         as="p"
         animation="fadeIn"
         by="line"
-        className={`mt-4 text-brand-green-deep tracking-[6.6px] ${bodyCopy} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(214*var(--u))] lg:mt-0`}
+        className={`mt-4 text-brand-green-deep tracking-[3.2px] lg:tracking-[6.6px] ${bodyCopy} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(214*var(--u))] lg:mt-0`}
       >
         {CLIENTS_COPY}
       </TextAnimate>

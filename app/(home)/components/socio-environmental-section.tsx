@@ -11,7 +11,10 @@ const fullBleedOnMobile =
 
 export default function SocioEnvironmentalSection() {
   return (
-    <section id="socioambiental" className="relative flex flex-col gap-8 bg-brand-olive px-6 pt-14 sm:px-10 lg:block lg:h-[calc(980*var(--u))] lg:px-0 lg:py-0">
+    <section
+      id="socioambiental"
+      className="relative flex flex-col gap-8 bg-brand-olive px-6 pt-14 pb-14 sm:px-10 lg:block lg:h-[calc(980*var(--u))] lg:px-0 lg:py-0"
+    >
       <DecorImage
         src="/home/leaf-socio.png"
         width={355}
@@ -24,14 +27,22 @@ export default function SocioEnvironmentalSection() {
         alt="Ação socioambiental da Greenew"
         width={3647}
         height={4085}
-        className={`order-last h-[240px] object-cover sm:h-[320px] lg:absolute lg:right-0 lg:top-0 lg:h-full ${fullBleedOnMobile}`}
+        className="absolute top-0 right-[-124px] object-cover  lg:hidden"
+      />
+
+      <Image
+        src="/home/socio-photo.png"
+        alt="Ação socioambiental da Greenew"
+        width={3647}
+        height={4085}
+        className="absolute inset-y-0 right-0 w-1/3 object-cover lg:bottom-auto lg:h-full lg:w-auto hidden lg:block"
       />
 
       <TextAnimate
         as="h2"
         animation="fadeIn"
         by="line"
-        className={`text-white tracking-[10.8px] ${sectionTitle} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(240*var(--u))]`}
+        className={`max-w-[60%] text-white tracking-[5.0px] lg:tracking-[10.8px] ${sectionTitle} lg:max-w-none lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(240*var(--u))]`}
       >
         SOCIOAMBIENTAL
       </TextAnimate>
@@ -40,7 +51,7 @@ export default function SocioEnvironmentalSection() {
         as="p"
         animation="fadeIn"
         by="line"
-        className={`text-brand-green-deep tracking-[6.6px] ${bodyCopy} lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(333*var(--u))] lg:w-[calc(768*var(--u))]`}
+        className={`max-w-[60%] text-brand-green-deep tracking-[2px] lg:tracking-[6.6px] ${bodyCopy} lg:max-w-none lg:absolute lg:left-[calc(187*var(--u))] lg:top-[calc(333*var(--u))] lg:w-[calc(768*var(--u))]`}
       >
         {SOCIO_COPY}
       </TextAnimate>

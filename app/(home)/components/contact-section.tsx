@@ -171,7 +171,7 @@ function ContactDetails() {
           </TextAnimate>
         </div>
         <Link href="">
-          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
+          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[2.8px]`}>
             ATENDIMENTO@GREENEWGROUP.COM
           </TextAnimate>
         </Link>

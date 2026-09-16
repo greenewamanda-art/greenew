@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -11,7 +10,6 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const path = usePathname();
 
   return (
     <>
@@ -45,7 +43,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <Image
               src="/home/logo-sidebar.png"
               alt="Greenew"
-              width={120}
+              width={140}
               height={100}
             />
             <div className="flex items-center gap-3">
@@ -83,14 +81,14 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </a>
             </div>
           </div>
-          <ul className="space-y-4">
+          <ul className="space-y-3 uppercase">
             <li>
               <Link
                 href="/"
                 onClick={onClose}
                 className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
               >
-                Agencia
+                agência
               </Link>
             </li>
             <li>
@@ -126,7 +124,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 onClick={onClose}
                 className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
               >
-                Portfolio
+                portfólio
               </Link>
             </li>
             <li>
@@ -139,12 +137,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </Link>
             </li>
             <li>
-              <div className="border-b mt-10 border-white"></div>
+              <div className="border-b mt-7 border-white"></div>
             </li>
           </ul>
         </nav>
 
-        <div className="absolute sm:bottom-9 bottom-8 pt-14 px-8 w-full -z-[1]">
+        <div className="absolute sm:bottom-9 bottom-8 pt-14 px-8 w-full -z-[1] uppercase">
           <div className="space-y-3 text-white">
             <div className="flex flex-col gap-5">
               <Link
@@ -194,7 +192,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </svg>{" "}
                   E-mail:
                 </div>
-                <span className="font-normal tracking-[1.5px]">
+                <span className="font-normal tracking-[1.2px]">
                   atendimento@greenewgroup.com
                 </span>
               </Link>

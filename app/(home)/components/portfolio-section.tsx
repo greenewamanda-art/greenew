@@ -6,10 +6,10 @@ import { portfolioItems } from "../content";
 import DecorImage from "./decor-image";
 
 const cardClass =
-  "flex h-[110px] items-center justify-center border-[3px] border-white px-4 text-center transition-colors hover:bg-white/10 lg:h-[calc(150*var(--u))]";
+  "flex h-[88px] items-center justify-center border-[2px] border-white px-3 text-center transition-colors hover:bg-white/10 sm:h-[110px] sm:border-[3px] sm:px-4 lg:h-[calc(150*var(--u))]";
 
 const cardLabelClass =
-  "font-avant font-medium text-white text-[22px] sm:text-[22px] lg:text-[calc(25*var(--u))] lg:leading-[calc(46*var(--u))]";
+  "font-avant font-medium text-white text-[18px] sm:text-[22px] lg:text-[calc(25*var(--u))] lg:leading-[calc(46*var(--u))]";
 
 const cardLineClass = "inline lg:block lg:whitespace-normal";
 

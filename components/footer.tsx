@@ -78,8 +78,7 @@ export default function Footer() {
             </Link>
             {".\n© 2026 GREENEW GROUP"}
           </p>
-
-          <div className="flex items-center gap-6 lg:contents">
+          <div className="flex items-center gap-2 lg:gap-6 lg:contents">
             {socialLinks.map((social, i) => (
               <a
                 key={social.icon}
@@ -87,7 +86,7 @@ export default function Footer() {
                 aria-label={social.label}
                 target="_blank"
                 rel="noreferrer"
-                style={vars({ "--l": 1595 + i * 79.65 })}
+                style={vars({ "--l": 1398 + i * 69.4 })}
                 className="block size-[40px] overflow-clip transition-opacity hover:opacity-70 lg:absolute lg:top-[calc(220*var(--u))] lg:left-[calc(var(--l)*var(--u))] lg:size-[calc(54.648*var(--u))]"
               >
                 <img

@@ -46,7 +46,7 @@ export default function AgencySection() {
           as="p"
           animation="fadeIn"
           by="line"
-          className={`relative z-10 tracking-[6.6px] text-brand-green-deep ${bodyCopy} lg:absolute lg:left-[calc(607*var(--u))] lg:top-[calc(145*var(--u))] lg:w-[calc(866*var(--u))]`}
+          className={`relative z-10 text-center tracking-[2px] lg:text-left lg:tracking-[6.6px] text-brand-green-deep ${bodyCopy} lg:absolute lg:left-[calc(607*var(--u))] lg:top-[calc(145*var(--u))] lg:w-[calc(866*var(--u))]`}
         >
           {AGENCY_COPY}
         </TextAnimate>
@@ -56,7 +56,7 @@ export default function AgencySection() {
           alt="Equipe Greenew"
           width={1334}
           height={1313}
-          className="relative h-[220px] w-full object-cover sm:h-[315px] lg:absolute lg:left-[calc(186*var(--u))] lg:top-[calc(350*var(--u))] lg:h-[calc(315*var(--u))] lg:w-[calc(320*var(--u))]"
+          className="relative hidden lg:block h-[220px] w-full object-cover sm:h-[315px] lg:absolute lg:left-[calc(186*var(--u))] lg:top-[calc(350*var(--u))] lg:h-[calc(315*var(--u))] lg:w-[calc(320*var(--u))]"
         />
       </section>
     </>
