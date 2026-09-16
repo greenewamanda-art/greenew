@@ -87,7 +87,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 style={vars({ "--l": 1398 + i * 69.4 })}
-                className="block size-[40px] overflow-clip transition-opacity hover:opacity-70 lg:absolute lg:top-[calc(220*var(--u))] lg:left-[calc(var(--l)*var(--u))] lg:size-[calc(54.648*var(--u))]"
+                className="block size-[40px] overflow-clip transition-opacity hover:opacity-70 lg:absolute lg:top-[calc(220*var(--u))] lg:left-[calc(var(--l)*var(--u))] lg:size-[calc(47.574*var(--u))]"
               >
                 <img
                   src={`/home/${social.icon}.svg`}
