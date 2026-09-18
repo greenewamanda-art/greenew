@@ -19,13 +19,13 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       <div
         id="sidebar"
-        className={`fixed bg-[#214222] top-0 right-0 h-full w-full max-w-[500px] sm:w-[400px] md:w-[500px] z-52 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed bg-[#214222] top-0 right-0 h-dvh w-full max-w-[500px] sm:w-[400px] md:w-[500px] z-52 transform transition-transform duration-300 ease-in-out overflow-hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-black hover:text-brand-green-deep text-2xl font-bold cursor-pointer"
+          className="absolute top-4 right-4 z-10 text-black hover:text-brand-green-deep text-2xl font-bold cursor-pointer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +38,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           </svg>
         </button>
 
-        <nav className="pt-16 px-8">
+        <div className="flex h-full flex-col justify-between overflow-y-auto">
+        <nav className="pt-16 px-8 shrink-0">
           <div className="mb-5 flex justify-between items-center">
             <Image
               src="/home/logo-sidebar.png"
@@ -81,12 +82,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </a>
             </div>
           </div>
-          <ul className="space-y-3 uppercase">
+          <ul className="space-y-5 sm:space-y-6 uppercase">
             <li>
               <Link
                 href="/"
                 onClick={onClose}
-                className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
+                className={`text-2xl font-normal transition-colors tracking-[1px] text-white`}
               >
                 agência
               </Link>
@@ -95,7 +96,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               <Link
                 href="/#oquefazemos"
                 onClick={onClose}
-                className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
+                className={`text-2xl font-normal transition-colors tracking-[1px] text-white`}
               >
                 O Que fazemos
               </Link>
@@ -104,7 +105,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               <Link
                 href="/#socioambiental"
                 onClick={onClose}
-                className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
+                className={`text-2xl font-normal transition-colors tracking-[1px] text-white`}
               >
                 Socioambiental
               </Link>
@@ -113,7 +114,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               <Link
                 href="/#clientes"
                 onClick={onClose}
-                className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
+                className={`text-2xl font-normal transition-colors tracking-[1px] text-white`}
               >
                 Clientes
               </Link>
@@ -122,7 +123,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               <Link
                 href="/#portfolio"
                 onClick={onClose}
-                className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
+                className={`text-2xl font-normal transition-colors tracking-[1px] text-white`}
               >
                 portfólio
               </Link>
@@ -131,25 +132,26 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               <Link
                 href="/#contato"
                 onClick={onClose}
-                className={`text-2xl font-normal transition-colors tracking-[3.6px] text-white`}
+                className={`text-2xl font-normal transition-colors tracking-[1px] text-white`}
               >
                 Contato
               </Link>
             </li>
-            <li>
-              <div className="border-b mt-7 border-white"></div>
-            </li>
           </ul>
         </nav>
 
-        <div className="absolute sm:bottom-9 bottom-8 pt-14 px-8 w-full -z-[1] uppercase">
+        <div className="px-8 shrink-0">
+          <div className="border-b border-white"></div>
+        </div>
+
+        <div className="pb-8 sm:pb-9 px-8 w-full uppercase shrink-0">
           <div className="space-y-3 text-white">
             <div className="flex flex-col gap-5">
               <Link
                 className="flex flex-col gap-5"
                 href="https://api.whatsapp.com/send?phone=5511985644535&text=Oi!%20Por%20favor,%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os."
               >
-                <div className="flex items-center gap-5 font-normal tracking-[7.5px]">
+                <div className="flex items-center gap-5 font-normal tracking-[1px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -168,7 +170,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </svg>{" "}
                   WhatsApp:
                 </div>
-                <span className="font-normal tracking-[7.5px]">
+                <span className="font-normal tracking-[1px]">
                   +55 11 98564-4535
                 </span>
               </Link>
@@ -177,7 +179,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 className="flex flex-col gap-5"
                 href="mailto:atendimento@greenewgroup.com"
               >
-                <div className="flex items-center gap-5 font-normal tracking-[7.5px]">
+                <div className="flex items-center gap-5 font-normal tracking-[1px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -192,7 +194,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </svg>{" "}
                   E-mail:
                 </div>
-                <span className="font-normal tracking-[1.2px]">
+                <span className="font-normal tracking-[1px]">
                   atendimento@greenewgroup.com
                 </span>
               </Link>
@@ -202,11 +204,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           <Button variant="link" asChild onClick={onClose} className="mt-5">
             <Link
               href="/politica-de-privacidade"
-              className="block font-normal tracking-[2.6px] text-white"
+              className="block font-normal tracking-[1px] text-white"
             >
               Política de privacidade
             </Link>
           </Button>
+        </div>
         </div>
       </div>
     </>

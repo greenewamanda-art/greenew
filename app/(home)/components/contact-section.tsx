@@ -66,7 +66,7 @@ function ContactDetails() {
     {CONTACT_COPY}
   </TextAnimate>
 
-  <div className="relative z-10 mt-8 space-y-6 lg:absolute lg:left-[calc(780*var(--u))] lg:top-1/2 lg:mt-0 lg:w-[calc(675*var(--u))] lg:-translate-y-1/2 lg:space-y-[calc(50*var(--u))]">
+  <div className="relative z-10 mt-8 space-y-8 lg:absolute lg:left-[calc(780*var(--u))] lg:top-1/2 lg:mt-0 lg:w-[calc(675*var(--u))] lg:-translate-y-1/2 lg:space-y-[calc(50*var(--u))]">
     {/* WHATSAPP */}
     <div>
       <div className="flex flex-col gap-2 lg:hidden">
@@ -74,12 +74,12 @@ function ContactDetails() {
           <Link href="" className="flex w-[20px] shrink-0 justify-center">
             <Image src="/home/icon-whatsapp.svg" alt="" aria-hidden width={20} height={20} className="w-full" />
           </Link>
-          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
+          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[2.8px]`}>
             WHATSAPP:
           </TextAnimate>
         </div>
         <Link href="">
-          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
+          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[2.8px]`}>
             +55 11 98564-4535
           </TextAnimate>
         </Link>
@@ -120,12 +120,12 @@ function ContactDetails() {
           <Link href="" className="flex w-[20px] shrink-0 justify-center">
             <Image src="/home/icon-address.svg" alt="" aria-hidden width={29} height={39} className="w-full" />
           </Link>
-          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
+          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[2.8px]`}>
             ENDEREÇO:
           </TextAnimate>
         </div>
         <Link href="">
-          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
+          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[2.8px]`}>
             RUA JERICÓ, 193 – CJ. 32 - VILA MADALENA SÃO PAULO/SP – BRASIL
           </TextAnimate>
         </Link>
@@ -151,7 +151,7 @@ function ContactDetails() {
             as="p"
             animation="fadeIn"
             by="line"
-            className={`text-brand-green-deep ${smallCopy} tracking-[6px] leaf-agencia.png`}
+            className={`text-brand-green-deep ${smallCopy} tracking-[2.8px] leaf-agencia.png`}
           >
             ENDEREÇO: RUA JERICÓ, 193 – CJ. 32 - VILA MADALENA SÃO PAULO/SP – BRASIL
           </TextAnimate>
@@ -166,7 +166,7 @@ function ContactDetails() {
           <Link href="" className="flex w-[28px] shrink-0 justify-center">
             <Image src="/home/icon-email.svg" alt="" aria-hidden width={36} height={26} className="w-full" />
           </Link>
-          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[6px]`}>
+          <TextAnimate as="p" animation="fadeIn" by="line" className={`text-brand-green-deep ${smallCopy} tracking-[2.8px]`}>
             E-MAIL:
           </TextAnimate>
         </div>
