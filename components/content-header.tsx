@@ -80,7 +80,7 @@ function DesktopHeader({ scrolled }: { scrolled: boolean }) {
           aria-label={social.label}
           target="_blank"
           rel="noreferrer"
-          style={vars({ "--l": 1398 + i * 69.4 })}
+          style={vars({ "--l": 1373 + i * 69.4 })}
           className="absolute top-[calc(74*var(--u))] left-[calc(var(--l)*var(--u))] -translate-y-1/2 block size-[calc(47.574*var(--u))] overflow-clip transition-opacity hover:opacity-70"
         >
           <img
